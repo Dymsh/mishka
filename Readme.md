@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Илья Дымшиц](https://up.htmlacademy.ru/adaptive/10/user/220126).
-* Наставник: `Неизвестно`.
+* Наставник: `Гоша Егорян`.
 
 ---
 
