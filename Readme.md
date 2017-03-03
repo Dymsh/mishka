@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Илья Дымшиц](https://up.htmlacademy.ru/adaptive/10/user/220126).
-* Наставник: `Неизвестно`.
+* Наставник: [Гоша Егорян](https://up.htmlacademy.ru/adaptive/10/user/85633).
 
 ---
 
@@ -47,7 +47,7 @@ git clone SSH-адрес_вашего_форка
 
 Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
 
-#### 4. Начинайте обучение!
+#### 4. Начинайте обучение!!!
 
 ---
 
