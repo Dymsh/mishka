@@ -21,11 +21,11 @@
       </nav>
     </header>
     
-    <main class="page-main">
-      <h1 class="page-main__head">Милые штуки ручной работы для дома</h1>
-      <div class="page-main__wrapper">
-        <p class="page-main__features">Предметы интерьера</p>
-        <p class="page-main__features">Детские игрушки</p>
+    <main class="intro">
+      <h1 class="intro__head">Милые штуки ручной работы для дома</h1>
+      <div class="intro__wrapper">
+        <div class="intro__features"><a class="intro__link" href="#">Предметы интерьера</a></div>
+        <div class="intro__features"><a class="intro__link" href="#">Детские игрушки</a></div>
       </div>
     </main>
     
@@ -44,7 +44,7 @@
         <img src="http://placehold.it/260x316" width="260" height="316" alt="goods picture">
       </div>
       <div class="goods-week__price">Цена:<span>990 руб.</span></div>
-      <button class="btn btn--goods-week" type=""><a class="btn__link" href="#">заказать</a></button>
+      <button class="btn btn--goods-week" type=""><a class="btn__link" href="#" id="order-modal">заказать</a></button>
     </section>
     
     <section class="about">
@@ -82,8 +82,13 @@
         <p class="contacts__desc">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
       </div>
       <div class="contacts__map">
-        <img src="http://placehold.it/320x457" alt="map" width="320" height="457">
-        <!-- -->
+        <!--<img src="http://placehold.it/320x457" alt="map" width="320" height="457">-->
+        <script 
+          type="text/javascript" 
+          charset="utf-8" async 
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=EUFjhkOuyu_m4raFtIAad4icHu5B0au2&amp;width=320&amp;height=457&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false">
+        </script>
+        
       </div>
       <button class="btn btn--contacts" type=""><a class="btn__link" href="#">напишите нам</a></button>
     </section>
