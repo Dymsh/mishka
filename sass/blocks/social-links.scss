@@ -1,0 +1,27 @@
+.social-links {
+  width: 156px;
+  padding: 24px 0 28px 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  
+  &__link {
+    display: block;
+    height: 30px;
+  }
+  
+  &__item {
+    width: 30px;
+    height: 30px;
+    
+    &--instagram {
+      background: url("../img/icon-insta.svg") 50% 50% no-repeat; 
+    }
+    &--facebook {
+      background: url("../img/icon-fb.svg") 50% 50% no-repeat; 
+    }
+    &--twitter {
+      background: url("../img/icon-twitter.svg") 50% 50% no-repeat; 
+    }
+  }
+}

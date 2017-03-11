@@ -1,0 +1,18 @@
+.main-header {
+  position: relative;
+  padding: 22px 30px;
+  &__logo {
+    width: $logo-width;
+    margin: auto;
+    
+    &:hover {
+    color: #666666;
+    }
+      
+    &:active {
+    color: b2b2b2;
+    }
+  }
+  
+  
+}

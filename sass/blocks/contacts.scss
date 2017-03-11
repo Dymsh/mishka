@@ -1,0 +1,38 @@
+.contacts {
+	
+	
+  &__head {
+	font: bold 18px/30px 'opensans'; 
+  margin-top: 44px;
+  padding: 0 30px;
+  }
+  
+  &__items {
+    font: 15px/30px 'opensans';
+    color: #444444;
+    margin-top: 32px;
+    padding: 0 30px;
+  }
+  
+  &__desc {
+    margin-left: 78px;
+  }
+  
+  &__desc--border {
+    border-bottom: 1px solid #62d1ba;
+  }
+  
+  &__name {
+    float: left;
+  }
+  
+  &--clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  &__map {
+    margin: 42px 0 40px 0; 
+  }
+}

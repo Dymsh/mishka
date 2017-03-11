@@ -3,15 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1">    
   </head>
-  <body>
+  <body class="page">
   
     <header class="main-header">
-      <div class="main-header__logo">
-        <img src="src=http://placehold.it/86x35" width="86" height="35" alt="logo">
+      <div class="main-header__logo"><a href="form.html">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="logo"></a>
       </div>
-      <nav class="main-nav">
-        <button class="main-nav__sandwich" type=""></button>
+      <button class="button-sandwich" type="button"></button>
+      <nav class="main-nav main-nav--visible">
         <div class="main-nav__wrapper">
           <ul class="main-nav__items">
             <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
@@ -24,32 +27,41 @@
     <main class="intro">
       <h1 class="intro__head">Милые штуки ручной работы для дома</h1>
       <div class="intro__wrapper">
-        <div class="intro__features"><a class="intro__link" href="#">Предметы интерьера</a></div>
-        <div class="intro__features"><a class="intro__link" href="#">Детские игрушки</a></div>
+        <div class="intro__features"><a class="intro__link" href="#">Предметы<br>интерьера</a></div>
+        <div class="intro__features intro__features--dark"><a class="intro__link" href="#">Детские<br>игрушки</a></div>
       </div>
     </main>
     
     <section class="goods-week">
       <h2 class="goods-week__head">Вязаные корзинки</h2>
-      <p class="goods-week__action">Товар недели</p>
+      <p class="goods-week__action">товар недели</p>
       <p class="goods-week__about">
         Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
       </p>
-      <ul class="goods-week__desc">
-        <li class="goods-week__desc-item">Цвет:<span class="goods-week__range">"Тиффани"/серый</span></li>
-        <li class="goods-week__desc-item">Диаметр:<span class="goods-week__range">25 см</span></li>
-        <li class="goods-week__desc-item">Высота:<span class="goods-week__range">15 см</span></li>
-      <ul>
+      <table class="goods-week__desc">
+        <tr class="goods-week__desc-item">
+          <td class="goods-week__par">Цвет:</td>
+          <td class="goods-week__ans">"Тиффани"/серый</td>
+        </tr>
+        <tr class="goods-week__desc-item">
+          <td class="goods-week__par">Диаметр</td>
+          <td class="goods-week__ans">25 см</td>
+        </tr>
+        <tr class="goods-week__desc-item">
+          <td class="goods-week__par">Высота:</td>
+          <td class="goods-week__ans">15 см</td>
+        </tr>
+      </table>
       <div class="goods-week__image">
-        <img src="http://placehold.it/260x316" width="260" height="316" alt="goods picture">
+        <img src="../img/triple-set-mobile@1x.jpg" width="260" height="316" alt="goods picture">
       </div>
-      <div class="goods-week__price">Цена:<span>990 руб.</span></div>
-      <button class="btn btn--goods-week" type=""><a class="btn__link" href="#" id="order-modal">заказать</a></button>
+      <div class="goods-week__price">Цена:<span> 990 руб.</span></div>
+      <button class="btn" type=""><a class="btn__link" href="#" id="order-modal">заказать</a></button>
     </section>
     
     <section class="about">
-      <h2 class="about__head">Коротко о нас:</h2>
-      <p class="about__item">Экологически чистые матеиалы</p>
+      <p class="about__head">Коротко о нас:</p>
+      <p class="about__item">Экологически чистые материалы</p>
       <p class="about__item">Скандинавский стиль по российской цене</p>
       <p class="about__item">Увеличивает лайки на фотографиях</p>
       <p class="about__item">Связано вручную с любовью и умилением</p>
@@ -58,6 +70,7 @@
     </section>
     
     <section class="reviews">
+      <p class="reviews__head">Отзывы</p>
       <p class="reviews__item">
         Я молодая мама, но всё равно фотографии не набирали и близко 
         такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила 
@@ -66,19 +79,19 @@
       </p>
       <p class="reviews__name">Анастасия Красильникова</p>
       <p class="reviews__email">@misssssiskras</p>
-      <div class="nav-reviews">
-        <div class="nav-reviews__left"></div>
-        <div class="nav-reviews__right"></div>
+      <div class="reviews__nav-wrap">
+        <div class="reviews__nav reviews__nav--left"><a class="reviews__nav-link" href="#"></a></div>
+        <div class="reviews__nav reviews__nav--right"><a class="reviews__nav-link" href="#"></a></div>
       </div>
       <button class="btn btn--reviews" type=""><a class="btn__link" href="#">написать</a></button>
     </section>
     
     <section class="contacts">
-      <p class="contacts__title">Контакты</p>
-      <div class="contacts__items">
-        <p class="contacts__name">e-mail</p>
-        <p class="contacts__desc">misssssiskras</p>
-        <p class="contacts__name">misssssiskras</p>
+      <p class="contacts__head">Контакты</p>
+      <div class="contacts__items contacts__items--clearfix">
+        <p class="contacts__name">e-mail:</p>
+        <p class="contacts__desc contacts__desc--border">info@mimimishkashop.ru</p>
+        <p class="contacts__name">адрес:</p>
         <p class="contacts__desc">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</p>
       </div>
       <div class="contacts__map">
@@ -86,7 +99,7 @@
         <script 
           type="text/javascript" 
           charset="utf-8" async 
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=EUFjhkOuyu_m4raFtIAad4icHu5B0au2&amp;width=320&amp;height=457&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false">
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=EUFjhkOuyu_m4raFtIAad4icHu5B0au2&amp;width=100%&amp;height=457&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false">
         </script>
         
       </div>
@@ -94,12 +107,12 @@
     </section>
     
     <footer class="main-footer">
-      <div class="main-footer__links">
-        <div class="main-footer__link page-footer__link--inst"><a class="main-footer__link" href="#"></a></div>
-        <div class="main-footer__link page-footer__link--facebook"><a class="main-footer__link" href="#"></a></div>
-        <div class="main-footer__link page-footer__link--twitter"><a class="main-footer__link" href="#"></a></div>
+      <div class="social-links">
+        <div class="social-links__item social-links__item--instagram"><a class="social-links__link" href="#"></a></div>
+        <div class="social-links__item social-links__item--facebook"><a class="social-links__link" href="#"></a></div>
+        <div class="social-links__item social-links__item--twitter"><a class="social-links__link" href="#"></a></div>
       </div>
-      <div class="main-footer__copyright">
+      <div class="main-footer__copyright main-footer__copyright--clearfix">
         <p class="main-footer__copy-text">Разработано</p>
         <div class="main-footer__copy-logo"></div>
       </div>

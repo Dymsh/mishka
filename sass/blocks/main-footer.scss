@@ -1,0 +1,31 @@
+.main-footer {
+	margin-top: 40px;
+  background: #f1f1f1;
+  padding: 0 30px;
+	
+  &__copyright {
+    border-top: 1px solid #e5e5e5;
+    margin: auto;
+    padding: 22px 0;
+        
+    &--clearfix:after {
+      display: table;
+      content: "";
+      clear: both;
+    }
+  }
+    
+	&__copy-text {
+    font: bold 19px/34px 'opensans'; 
+    float: left;
+    margin-left: 40px;
+  }
+  
+  &__copy-logo {
+    float: right;
+    margin-right: 40px;
+    width: 27px;
+    height: 34px;
+    background: url("../img/logo-htmlacademy.svg") 50% 50% no-repeat;
+  } 
+}

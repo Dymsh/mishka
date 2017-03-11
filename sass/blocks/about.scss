@@ -1,0 +1,31 @@
+.about {
+  padding: 0 30px;
+  
+  &__head {
+    font: bold 25px/30px 'opensans';
+    margin-top: 30px;
+  }
+  
+  &__item {
+    position: relative;
+    padding-top: 85px;
+    font: bold 17px/20px 'opensans';
+    
+    &:before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 42px;
+      height: 74px;
+      top: 10px;
+      left: 0px;
+    }
+  }  
+}    
+
+@for $i from 2 through 7 {
+  .about__item:nth-child(#{$i}):before {
+    background: url("../img/icon-feature-#{$i - 1}.svg") 50% 50% no-repeat;
+  }
+}   
+  
