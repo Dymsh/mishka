@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>Вязание на заказ</title>
   </head>
-  <body>
-  
+  <body>  
     <header class="main-header">
       <div class="main-header__logo">
         <a href="index.html"><img src="src=http://placehold.it/86x35" width="86" height="35" alt="logo"></a>
@@ -20,7 +19,6 @@
         </div>
       </nav>
     </header>
-    
     <div class="intro">
       <h1 class="intro__head">Вязание на заказ</h1>
       <p class="intro__text">
@@ -28,12 +26,10 @@
         Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </p>
     </div>
-    
     <form class="query" action="https://echo.htmlacademy.ru/" method="post">
       <div class="query__line">тип</div>
       <label class="query__radio-lab"><input class="query__radio" type="radio" name="g-type" value="thing-for-home" checked>Аксессуар для интерьера</label>
       <label class="query__radio-lab"><input class="query__radio" type="radio" name="g-type" value="gids-game">Детская игрушка</label>
-      
       <div class="query__line">цвет</div>
       <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="white" checked>Белый</label>
       <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="grey" checked>Серый</label>
@@ -41,25 +37,19 @@
       <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="black" >Черный</label>
       <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="pink" >Розовый</label>
       <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="orange" >Оранжевый</label>
-      
       <div class="query__line">фио</div>
       <label class="query__text-lab">Имя:<input class="query__text" type="text" name="firstname" value="" placeholder="Введите ваше имя*"></label>
       <label class="query__text-lab">Фамилия:<input class="query__text" type="text" name="secondname" value="" placeholder="Укажите фамилию*"></label>
       <label class="query__text-lab">Отчество:<input class="query__text" type="text" name="middlename" value="" placeholder="Отчество если желаете"></label>
-      
       <div class="query__line">тел</div>
       <label class="query__text-tel"><input class="query__tel" type="tel" name="tel" value="" placeholder="+7 XXX XX XX*"></label>
-      
       <div class="query__line">e-mail</div>
       <label class="query__text-email"><input class="query__email" type="email" name="email" value="" placeholder="Ваш Email*"></label>
-      
       <div class="query__line">доп</div>
       <textarea class="query__add" name="add" rows="8" placeholder="Опишите ваши пожелания к заказу"></textarea>
-      
       <small class="query__desc"><sup>*</sup>Поля обязателные для заполнения</small> 
-      <button class="btn btn__query" type="submit" value="form-send">отправить заказ</button>
+      <button class="btn btn--query" type="submit" value="form-send">отправить заказ</button>
     </form>
-     
     <footer class="main-footer">
       <div class="main-footer__links">
         <div class="main-footer__link page-footer__link--inst"><a class="main-footer__link" href="#"></a></div>
@@ -71,6 +61,5 @@
         <div class="main-footer__copy-logo"></div>
       </div>
     </footer>
-    
   </body>
 </html>
