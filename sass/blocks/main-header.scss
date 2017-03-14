@@ -1,16 +1,22 @@
 .main-header {
   position: relative;
-  padding: 22px 30px;
+  
+  &__wrapper {
+    @include container; 
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  
   &__logo {
     width: $logo-width;
     margin: auto;
     
     &:hover {
-    color: #666666;
+      color: #666666;
     }
       
     &:active {
-    color: b2b2b2;
+      color: b2b2b2;
     }
   }
   

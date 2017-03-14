@@ -1,0 +1,10 @@
+@mixin container () {
+	padding: 0 10%;
+
+}
+
+@mixin clearfix () {
+  contant: "";
+  display: table;
+  clear: both;
+}

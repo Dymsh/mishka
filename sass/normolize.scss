@@ -8,9 +8,14 @@ html {
 .page {
   margin: 0px;
   padding: 0px;
+  min-width: 320px;
   font: 15px 'opensans' , sans-serif;
-  
  }
+ 
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 a {
   text-decoration: none;

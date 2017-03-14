@@ -1,11 +1,15 @@
 .reviews {
-  padding: 0 30px;
   color: #444444;
+  
+  &__wrapper {
+	@include container;
+  }
   
   &__head {
     font: bold 25px/30px 'opensans';
     margin-top: 52px;
   }
+  
   &__item {
     font: 15px/30px 'opensans';
     margin-top: 25px;
@@ -26,14 +30,16 @@
     display: flex;
     border: 1px solid #ececec;
     margin: 35px 0px 38px 0;
-    
   } 
+  
   &__nav {
     flex-basis: 50%;
     height: 50px;
+	
     &--left {
       background: url("../img/icon-left-arrow.svg") 50% 50% no-repeat;
     }
+	
     &--right {
       background: url("../img/icon-right-arrow.svg") 50% 50% no-repeat;
       border-left: 1px solid #ececec;
@@ -48,9 +54,9 @@
   &:after {
     display: block;
     content: "";
-    margin-top: 35px;
+    margin-top: 45px;
     height: 7px;
-    background: url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
+    background: #e4e4ff url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
   }
   
   

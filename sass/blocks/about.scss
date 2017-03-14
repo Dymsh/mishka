@@ -1,5 +1,7 @@
 .about {
-  padding: 0 30px;
+  &__wrapper {
+	  @include container;
+  }
   
   &__head {
     font: bold 25px/30px 'opensans';

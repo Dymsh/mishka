@@ -1,7 +1,10 @@
 .goods-week {
-  padding: 0 30px;
   color: #444444;
-  
+ 
+  &__wrapper {
+	@include container;  
+  }
+    
   &__head {
     font: bold 25px/30px 'opensans'; 
     padding-top: 27px;
@@ -46,15 +49,14 @@
     font: bold 17px/74px 'opensans';
     
   }
-  
-  
+    
   &:after {
-      display: block;
-      content: "";
-      margin-top: 35px;
-      height: 7px;
-      background: url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
-    }
+    display: block;
+    content: "";
+    margin-top: 45px;
+    height: 7px;
+    background: #e4e4ff url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
+  }
   
 }
 
