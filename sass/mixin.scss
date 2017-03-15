@@ -1,6 +1,20 @@
 @mixin container () {
-	padding: 0 10%;
+	padding: 0 9%;
+  /*width: 260px;
+  margin: auto;
+*/
+}
 
+@mixin input () {
+    display: block;
+    width: 100%;
+    border: none;
+    font: 17px/18px 'opensans';
+    border-bottom: 2px solid #000;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+    }
 }
 
 @mixin clearfix () {

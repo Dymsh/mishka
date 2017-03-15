@@ -1,45 +1,56 @@
 .query {
-	padding: 0 30px;
+  @include container;
   
   &__line {
+    display: flex;
     font: bold 16px/60px 'opensans';
     text-transform: uppercase;
     color: $bg-color-1;
-    margin-bottom: 33px;
-     
-    &:after {
+  
+    & span:first-child{
+      margin-right: 30px;  
+    }
+      
+    &:after{
       content: "";
       display: block;
+      flex-grow: 1;
+      align-self: center;
       height: 1px;
-      border-bottom: 1px solid $bg-color-1;
-      margin-top: -30px;
-      margin-left: 50px;
+      background-color: $bg-color-1;
     }
   }
-  
- 
-  
+/*                        radio                       */     
+  &__radio-wrap {
+    margin-bottom: -10px;
+  }
+   
   &__radio-lab {
     display: block;
     position: relative;
     font: bold 17px/18px 'opensans';
-    height: 60px;
-    padding:20px 0 0 63px;
-    
-    box-sizing: border-box;
+    padding: 14px 0 11px 63px;
+    min-height: 36px;
     cursor: pointer;
         
     &:before {
       content: "";
       position: absolute;
-      bottom: 9px;
+      top: 4px;
       left: 0px;
       width: 40px;
       height: 40px;
-      border: 2px solid $col-gray; 
+      border: 2px solid $col-grey; 
       border-radius: 50%;
       box-sizing: border-box;
     }
+    &:hover:before {
+      border: 2px solid $bg-color-1;
+    }
+    &:active:before {
+      border: 2px solid #c7c7c7;
+    }
+    
     
     &:after {
       content: "";
@@ -54,23 +65,158 @@
       
     }
   }  
-    &__radio {
+  
+  &__radio {
       display: none;  
+  }
+  
+  &__radio:checked + &__radio-lab:after {
+        display: block;
+  }
+    
+  &__radio-lab:after {
+        content: "";
+        display: none;
+        position: absolute;
+        width: 16px; 
+        height: 16px;
+        left: 12px;
+        top: 16px;
+        background-color: $bg-color-1;
+        border-radius: 50%;
+  }
+
+  
+  
+/*                                     checkbox                            */
+  &__check-wrap {
+    margin: 6px 0 13px 0;
+  }
+    
+  &__check-lab {
+    display: block;
+    position: relative;
+    font: bold 17px/18px 'opensans'; 
+    padding-left: 64px;
+    line-height: 36px;
+    margin-bottom: 25px;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      top: -3px;
+      left: 0px;
+      border: 2px solid $col-grey;
+    }
+    &:hover:before {
+      border: 2px solid #62d1ba;
+    }
+    &:active:before {
+      border: 2px solid #c7c7c7;
+    }
+  }
+  
+  &__check-lab:last-child {
+    margin-bottom: 0px;
+  }
+  
+  &__check {
+    display: none;
+  }
+
+  &__check:checked + &__check-lab:after {
+        display: block;
+  }
+    
+  &__check-lab:after {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    left: 8px;
+    top: 8px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg);
+  }
+  
+  
+/*                                     text                          */
+  &__text-wrap {
+    margin: 6px 0 -12px 0;
+  }
+
+  &__text-lab {
+    font: bold 17px/18px 'opensans';
+    display: block;
+  }
+  
+  &__text {
+    @include input;
+    padding: 14px 0 15px 0;
+    margin-bottom: 25px;
+    
+    &:hover, &:focus {
+      border-bottom: 2px solid #62d1ba;
     }
     
-    .query__radio:checked ~ .query__radio-lab:after {
-        display: block;
-      }
+  }
+  
+
+  /*                                     tel                          */ 
+  
+  &__tel {
+    @include input;
+    padding: 0px 0 13px 0;
     
+    &:hover, &:focus {
+      border-bottom: 2px solid #62d1ba;
+    }
+  }
+  
+  &__tel-lab {
+    display: block;
+    margin: 0 0 10px 0;
+  }
+  
+  /*                                     email                          */   
+  
+    &__email {
+    @include input;
+    padding: 0px 0 18px 0;
+  }
+  
+  &__email-lab {
+    display: block;
+    margin: 0 0 10px 0;
+  }
+
+    /*                                     add                         */
+  &__add {
+    border: 2px solid #000;
+    padding: 15px;
+    font: 17px/18px 'opensans';
+    width: 100%;
+    box-sizing: border-box;
+    
+    &:hover {
+      border: 2px solid #62d1ba;
+    }
+    &:focus {
+      outline: none;
+      border: 2px solid #62d1ba;
+    }
+  }  
+    
+  &__note {
+    display: block;
+    font: 14px/16px 'opensans';
+    color: $col-grey;
+    margin: 11px 0 29px 0;
+  }
   
 }
-.help {
-      display: none;
-      position: absolute;
-      width: 16px; 
-      height: 16px;
-      left: 12px;
-      bottom: 18px;
-      background-color: $bg-color-1;
-      border-radius: 50%;
-}
+

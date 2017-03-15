@@ -1,0 +1,38 @@
+.craft {
+  @include container;
+  
+  
+  
+  &__wrapper {
+    margin-top: 30px;
+    border: 1px solid #ededed;
+    padding-bottom: 32px;
+  }
+  
+  &__title {
+    position: relative;
+    padding: 22px 0 22px 90px;
+    font: bold 17px/24px 'opensans';
+    color: #000;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      width: 40px;
+      left: 30px;
+      height: 40px;
+      background: url(/img/icon-video.svg) 50% 50% no-repeat;
+    }
+  }
+  
+  &__video {
+    
+  }
+  
+  &__description {
+    font: 13px/24px 'opensans';
+    padding: 30px 32px 22px 32px;
+    color: $col-grey;
+  }
+}

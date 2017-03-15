@@ -5,10 +5,9 @@
     <title>Вязание на заказ</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width,initial-scale=1">   
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
-  <body>
-  
+  <body class="page">
     <header class="main-header">
       <div class="main-header__wrapper">
         <div class="main-header__logo">
@@ -25,57 +24,65 @@
         </nav>
       </div>
     </header>
-    
     <div class="intro">
       <h1 class="intro__head intro__head--form">Вязание на заказ</h1>
       <p class="intro__text">
-        Мы будем рады воплотить в жизнь ваши пожелания! 
+        Мы будем рады воплотить в жизнь ваши пожелания!
         Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       </p>
     </div>
-    
     <form class="query" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="query__line">тип</div>
-      <label class="query__radio-lab"><input class="query__radio" type="radio" name="g-type" value="thing-for-home" checked>Аксессуар для интерьера<div class="help"></div></label>
-      <label class="query__radio-lab"><input class="query__radio" type="radio" name="g-type" value="gids-game">Детская игрушка</label>
+      <div class="query__line"><span>тип</span></div>
+      <div class="query__radio-wrap">
+        <input id="radio-1" class="query__radio" type="radio" name="g-type" value="thing-for-home" checked>
+        <label for="radio-1" class="query__radio-lab">Аксессуар для интерьера</label>
+        <input id="radio-2" class="query__radio" type="radio" name="g-type" value="kids-game">
+        <label for="radio-2" class="query__radio-lab">Детская игрушка</label>
+      </div>
+      <div class="query__line"><span>цвет</span></div>
+      <div class="query__check-wrap">
+        <input id="col-w" class="query__check" type="checkbox" name="color[]" value="white" checked>
+        <label for="col-w" class="query__check-lab">Белый</label>
+        <input id="col-g" class="query__check" type="checkbox" name="color[]" value="grey" checked>
+        <label for="col-g" class="query__check-lab">Серый</label>
+        <input id="col-t" class="query__check" type="checkbox" name="color[]" value="tifani">
+        <label for="col-t" class="query__check-lab">"Тиффани"</label>
+        <input id="col-b" class="query__check" type="checkbox" name="color[]" value="black">
+        <label for="col-b" class="query__check-lab">Черный</label>
+        <input id="col-p" class="query__check" type="checkbox" name="color[]" value="pink">
+        <label for="col-p" class="query__check-lab">Розовый</label>
+        <input id="col-o" class="query__check" type="checkbox" name="color[]" value="orange">
+        <label for="col-o" class="query__check-lab">Оранжевый</label>
+      </div>
+      <div class="query__line"><span>фио</span></div>
+        <div class="query__text-wrap">
+        <label class="query__text-lab">Имя:<input class="query__text" type="text" name="firstname" value="" placeholder="Введите ваше имя*"></label>
+        <label class="query__text-lab">Фамилия:<input class="query__text" type="text" name="secondname" value="" placeholder="Укажите фамилию*"></label>
+        <label class="query__text-lab">Отчество:<input class="query__text" type="text" name="middlename" value="" placeholder="Отчество если желаете"></label>
+      </div>
+      <div class="query__line"><span>тел</span></div>
+      <label class="query__tel-lab"><input class="query__tel" type="tel" name="tel" value="" placeholder="+7 XXX XX XX*"></label>
+      <div class="query__line"><span>e-mail</span></div>
+      <label class="query__email-lab"><input class="query__email" type="email" name="email" value="" placeholder="Ваш Email*"></label>
       
-      <div class="query__line">цвет</div>
-      <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="white" checked>Белый</label>
-      <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="grey" checked>Серый</label>
-      <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="tifani" >"Тиффани"</label>
-      <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="black" >Черный</label>
-      <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="pink" >Розовый</label>
-      <label class="query__check-lab"><input class="query__check" type="checkbox" name="color[]" value="orange" >Оранжевый</label>
+      <div class="query__line"><span>доп</span></div>
+      <textarea class="query__add" name="add" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       
-      <div class="query__line">фио</div>
-      <label class="query__text-lab">Имя:<input class="query__text" type="text" name="firstname" value="" placeholder="Введите ваше имя*"></label>
-      <label class="query__text-lab">Фамилия:<input class="query__text" type="text" name="secondname" value="" placeholder="Укажите фамилию*"></label>
-      <label class="query__text-lab">Отчество:<input class="query__text" type="text" name="middlename" value="" placeholder="Отчество если желаете"></label>
-      
-      <div class="query__line">тел</div>
-      <label class="query__text-tel"><input class="query__tel" type="tel" name="tel" value="" placeholder="+7 XXX XX XX*"></label>
-      
-      <div class="query__line">e-mail</div>
-      <label class="query__text-email"><input class="query__email" type="email" name="email" value="" placeholder="Ваш Email*"></label>
-      
-      <div class="query__line">доп</div>
-      <textarea class="query__add" name="add" rows="8" placeholder="Опишите ваши пожелания к заказу"></textarea>
-      
-      <small class="query__desc"><sup>*</sup>Поля обязателные для заполнения</small> 
+      <small class="query__note"><sup>*</sup>Поля обязателные для заполнения</small> 
       <button class="btn btn__query" type="submit" value="form-send">отправить заказ</button>
     </form>
-     
     <footer class="main-footer">
-      <div class="main-footer__links">
-        <div class="main-footer__link page-footer__link--inst"><a class="main-footer__link" href="#"></a></div>
-        <div class="main-footer__link page-footer__link--facebook"><a class="main-footer__link" href="#"></a></div>
-        <div class="main-footer__link page-footer__link--twitter"><a class="main-footer__link" href="#"></a></div>
-      </div>
-      <div class="main-footer__copyright">
-        <p class="main-footer__copy-text">Разработано</p>
-        <div class="main-footer__copy-logo"></div>
+      <div class="main-footer__wrapper">
+        <div class="social-links">
+          <div class="social-links__item social-links__item--instagram"><a class="social-links__link" href="#"></a></div>
+          <div class="social-links__item social-links__item--facebook"><a class="social-links__link" href="#"></a></div>
+          <div class="social-links__item social-links__item--twitter"><a class="social-links__link" href="#"></a></div>
+        </div>
+        <div class="main-footer__copyright">
+          <p class="main-footer__copy-text">Разработано</p>
+          <div class="main-footer__copy-logo"></div>
+        </div>
       </div>
     </footer>
-    
   </body>
 </html>
