@@ -4,16 +4,13 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  
   &__link {
     display: block;
     height: 30px;
   }
-  
   &__item {
     width: 30px;
     height: 30px;
-    
     &--instagram {
       background: url("../img/icon-insta.svg") 50% 50% no-repeat; 
     }

@@ -1,10 +1,9 @@
 @mixin container () {
-	padding: 0 9%;
+  padding: 0 9%;
   /*width: 260px;
   margin: auto;
 */
 }
-
 @mixin input () {
     display: block;
     width: 100%;
@@ -16,7 +15,6 @@
       outline: none;
     }
 }
-
 @mixin clearfix () {
   contant: "";
   display: table;

@@ -1,16 +1,13 @@
 .query {
   @include container;
-  
   &__line {
     display: flex;
     font: bold 16px/60px 'opensans';
     text-transform: uppercase;
     color: $bg-color-1;
-  
     & span:first-child{
       margin-right: 30px;  
     }
-      
     &:after{
       content: "";
       display: block;
@@ -24,7 +21,6 @@
   &__radio-wrap {
     margin-bottom: -10px;
   }
-   
   &__radio-lab {
     display: block;
     position: relative;
@@ -32,7 +28,6 @@
     padding: 14px 0 11px 63px;
     min-height: 36px;
     cursor: pointer;
-        
     &:before {
       content: "";
       position: absolute;
@@ -50,8 +45,6 @@
     &:active:before {
       border: 2px solid #c7c7c7;
     }
-    
-    
     &:after {
       content: "";
       display: none;
@@ -62,18 +55,14 @@
       bottom: 18px;
       background-color: $bg-color-1;
       border-radius: 50%;
-      
     }
   }  
-  
   &__radio {
       display: none;  
   }
-  
   &__radio:checked + &__radio-lab:after {
         display: block;
   }
-    
   &__radio-lab:after {
         content: "";
         display: none;
@@ -85,14 +74,10 @@
         background-color: $bg-color-1;
         border-radius: 50%;
   }
-
-  
-  
 /*                                     checkbox                            */
   &__check-wrap {
     margin: 6px 0 13px 0;
   }
-    
   &__check-lab {
     display: block;
     position: relative;
@@ -100,7 +85,6 @@
     padding-left: 64px;
     line-height: 36px;
     margin-bottom: 25px;
-    
     &:before {
       content: "";
       position: absolute;
@@ -117,19 +101,15 @@
       border: 2px solid #c7c7c7;
     }
   }
-  
   &__check-lab:last-child {
     margin-bottom: 0px;
   }
-  
   &__check {
     display: none;
   }
-
   &__check:checked + &__check-lab:after {
         display: block;
   }
-    
   &__check-lab:after {
     content: "";
     display: none;
@@ -142,58 +122,43 @@
     border-bottom: 2px solid #000;
     transform: rotate(-45deg);
   }
-  
-  
 /*                                     text                          */
   &__text-wrap {
     margin: 6px 0 -12px 0;
   }
-
   &__text-lab {
     font: bold 17px/18px 'opensans';
     display: block;
   }
-  
   &__text {
     @include input;
     padding: 14px 0 15px 0;
     margin-bottom: 25px;
-    
     &:hover, &:focus {
       border-bottom: 2px solid #62d1ba;
     }
-    
   }
-  
-
   /*                                     tel                          */ 
-  
   &__tel {
     @include input;
     padding: 0px 0 13px 0;
-    
     &:hover, &:focus {
       border-bottom: 2px solid #62d1ba;
     }
   }
-  
   &__tel-lab {
     display: block;
     margin: 0 0 10px 0;
   }
-  
   /*                                     email                          */   
-  
     &__email {
     @include input;
     padding: 0px 0 18px 0;
   }
-  
   &__email-lab {
     display: block;
     margin: 0 0 10px 0;
   }
-
     /*                                     add                         */
   &__add {
     border: 2px solid #000;
@@ -201,7 +166,6 @@
     font: 17px/18px 'opensans';
     width: 100%;
     box-sizing: border-box;
-    
     &:hover {
       border: 2px solid #62d1ba;
     }
@@ -210,13 +174,10 @@
       border: 2px solid #62d1ba;
     }
   }  
-    
   &__note {
     display: block;
     font: 14px/16px 'opensans';
     color: $col-grey;
     margin: 11px 0 29px 0;
   }
-  
 }
-

@@ -1,11 +1,9 @@
 .contacts {
-	
   &__head {
     @include container;
     font: bold 18px/30px 'opensans'; 
     margin-top: 44px;
   }
-  
   &__items {
     @include container;
     display: flex;
@@ -13,12 +11,10 @@
     font: 15px/30px 'opensans';
     color: #444444;
   }
-  
   &__desc {
     width: 70%;
     margin-top: 35px;
   }
-  
   &__link {
     border-bottom: 1px solid #62d1ba;
     &:hover {
@@ -28,18 +24,13 @@
     &:active {
       border-bottom: 1px solid #ecf9f7;
       color: #ecf9f7;
-      
     }
   }
-  
   &__name {
     width: 30%;
     margin-top: 35px;
   }
-  
   &__map {
     margin: 42px 0 40px 0; 
   }
-  
-  
 }

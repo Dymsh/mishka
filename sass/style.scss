@@ -1,9 +1,7 @@
 @import "normolize.scss";
 @import "variables.scss";
 @import "mixin.scss";
-
 @import "global/fonts.scss";
-
 /* index.scss - start */
 @import "blocks/main-header.scss";
 @import "blocks/main-nav.scss";
@@ -16,13 +14,9 @@
 @import "blocks/contacts.scss";
 @import "blocks/main-footer.scss";
 @import "blocks/social-links.scss";
-
-
 /* form.scss - start */
 @import "blocks/query.scss";
-
 /* catalog.scss - end */
 @import "blocks/cards.scss";
 @import "blocks/item.scss";
 @import "blocks/craft.scss";
-

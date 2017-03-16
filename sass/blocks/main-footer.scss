@@ -1,23 +1,19 @@
 .main-footer {
   background: #f1f1f1;
-    
   &__wrapper {
 	@include container;
 	margin-top: 40px;  
   }
-  
   &__copyright {
     display: flex;
     border-top: 1px solid #e5e5e5;
     padding: 22px 0;
   }
-    
 	&__copy-text {
     font: bold 19px/34px 'opensans';
     width: 75%;
     text-align: center;
   }
-  
   &__copy-logo {
     width: 27px;
     height: 34px;

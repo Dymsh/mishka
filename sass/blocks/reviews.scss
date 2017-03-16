@@ -1,56 +1,45 @@
 .reviews {
   color: $col-grey;
-  
   &__wrapper {
 	@include container;
   }
-  
   &__head {
     font: bold 25px/30px 'opensans';
     margin-top: 52px;
   }
-  
   &__item {
     font: 15px/30px 'opensans';
     margin-top: 25px;
   }
-  
   &__name {
     font: bold 17px/20px 'opensans';
     margin-top: 55px;
     color: #000;
   }
-  
   &__email {
     font: 15px/17px 'opensans';
     margin-top: 16px;
   }
-  
   &__nav-wrap {
     display: flex;
     border: 1px solid #ececec;
     margin: 35px 0px 38px 0;
   } 
-  
   &__nav {
     flex-basis: 50%;
     height: 50px;
-	
     &--left {
       background: url("../img/icon-left-arrow.svg") 50% 50% no-repeat;
     }
-	
     &--right {
       background: url("../img/icon-right-arrow.svg") 50% 50% no-repeat;
       border-left: 1px solid #ececec;
     }
   }
-  
   &__nav-link {
     display: block;
     height: 50px;
   }
-  
   &:after {
     display: block;
     content: "";
@@ -58,6 +47,4 @@
     height: 7px;
     background: #e4e4ff url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
   }
-  
-  
 }

@@ -7,21 +7,17 @@
   text-align: center;
   width: 260px;
   background-color: transparent;
-    
   &__link {
     display: block;
   }
-  
   &:hover {
 	  background: $col-grey;
     color: #ffffff;
   }
-  
   &:active {
    	background: $col-grey;
     color: #7c7c7c; 
   }
-  
   &--catalog {
 	width: 190px; 
   }
