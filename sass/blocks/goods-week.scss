@@ -1,10 +1,10 @@
 .goods-week {
   color: #444444;
   &__wrapper {
-	@include container;  
+  @include container;
   }
   &__head {
-    font: bold 25px/30px 'opensans'; 
+    font: bold 25px/30px 'opensans';
     padding-top: 27px;
   }
   &__action {
@@ -33,7 +33,7 @@
   }
   &__image {
     margin-top: 28px;
-	text-align: center;
+  text-align: center;
   }
   &__price {
     text-align: center;

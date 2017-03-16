@@ -1,6 +1,6 @@
 .about {
   &__wrapper {
-	  @include container;
+    @include container;
   }
   &__head {
     font: bold 25px/30px 'opensans';
@@ -19,10 +19,10 @@
       top: 10px;
       left: 0px;
     }
-  }  
-}    
+  }
+}
 @for $i from 2 through 7 {
   .about__item:nth-child(#{$i}):before {
     background: url("../img/icon-feature-#{$i - 1}.svg") 50% 50% no-repeat;
   }
-}   
+}

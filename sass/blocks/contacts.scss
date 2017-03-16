@@ -1,7 +1,7 @@
 .contacts {
   &__head {
     @include container;
-    font: bold 18px/30px 'opensans'; 
+    font: bold 18px/30px 'opensans';
     margin-top: 44px;
   }
   &__items {
@@ -31,6 +31,6 @@
     margin-top: 35px;
   }
   &__map {
-    margin: 42px 0 40px 0; 
+    margin: 42px 0 40px 0;
   }
 }

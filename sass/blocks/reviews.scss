@@ -1,7 +1,7 @@
 .reviews {
   color: $col-grey;
   &__wrapper {
-	@include container;
+  @include container;
   }
   &__head {
     font: bold 25px/30px 'opensans';
@@ -24,7 +24,7 @@
     display: flex;
     border: 1px solid #ececec;
     margin: 35px 0px 38px 0;
-  } 
+  }
   &__nav {
     flex-basis: 50%;
     height: 50px;
