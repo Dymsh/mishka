@@ -1,6 +1,76 @@
 .main-nav {
-  position: relative;
-  &--visible {
-  display: none;
+  font: bold 17px/24px 'opensans';
+  & a {
+    display: block;
+    padding: 27px 0 27px 24%;
+  }
+  &__item {
+    border-bottom: 1px solid #ececec;
+    position: relative;
+	z-index: 10;
+    &:first-child {
+      border-top: 1px solid #ececec;
+    }
+    &--search:before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 73px;
+      height: 73px;
+      background: url("/img/icon-search.svg") 50% 50% no-repeat;
+    }
+    &--basket:before{
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 73px;
+      height: 73px;
+      background: url("/img/icon-cart.svg") 50% 50% no-repeat;
+    }
+  }
+  &__btn {
+    display: none;
+    position: absolute;
+    right: 9%;
+    top: -55px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+@media #{$media-mobile-only} {
+  .main-nav--open  {
+    & .main-nav__items{
+      position: absolute;
+      background: #fff;
+      width: 100%;
+      top: 84px;
+      left: 0px;
+    }
+    & .main-nav__btn  {
+      display: block;
+      top: 28px;
+      background: url("/img/icon-menu-close.svg") 50% 50% no-repeat;
+    }
+  }
+  .main-nav--closed {
+    & .main-nav__items{
+      display: none;
+    }
+    & .main-nav__btn {
+      display: block;
+      top: 28px;
+      background: url("/img/icon-menu-open.svg") 50% 50% no-repeat;
+    }
+  }
+  .main-nav--nojs { 
+    & .main-nav__items {
+    display: block;
+    }
+    & .main-nav__btn {
+      display: none;
+    }
   }
 }

@@ -1,11 +1,10 @@
 .main-header {
   position: relative;
-  &__wrapper {
+  border-bottom: 1px solid #ececec;
+  &__logo {
     @include container;
     padding-top: 22px;
     padding-bottom: 22px;
-  }
-  &__logo {
     width: $logo-width;
     margin: auto;
     &:hover {
