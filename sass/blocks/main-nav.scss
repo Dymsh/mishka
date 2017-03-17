@@ -7,7 +7,7 @@
   &__item {
     border-bottom: 1px solid #ececec;
     position: relative;
-	z-index: 10;
+    z-index: 10;
     &:first-child {
       border-top: 1px solid #ececec;
     }
@@ -65,7 +65,7 @@
       background: url("/img/icon-menu-open.svg") 50% 50% no-repeat;
     }
   }
-  .main-nav--nojs { 
+  .main-nav--nojs {
     & .main-nav__items {
     display: block;
     }
