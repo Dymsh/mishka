@@ -18,7 +18,7 @@
       left: 0px;
       width: 73px;
       height: 73px;
-      background: url("/img/icon-search.svg") 50% 50% no-repeat;
+      background: #fff url("../img/icon-search.svg") 50% 50% no-repeat;
     }
     &--basket:before{
       content: "";
@@ -27,7 +27,7 @@
       left: 0px;
       width: 73px;
       height: 73px;
-      background: url("/img/icon-cart.svg") 50% 50% no-repeat;
+      background: #fff url("../img/icon-cart.svg") 50% 50% no-repeat;
     }
   }
   &__btn {
@@ -52,7 +52,7 @@
     & .main-nav__btn  {
       display: block;
       top: 28px;
-      background: url("/img/icon-menu-close.svg") 50% 50% no-repeat;
+      background: #fff url("../img/icon-menu-close.svg") 50% 50% no-repeat;
     }
   }
   .main-nav--closed {
@@ -62,7 +62,7 @@
     & .main-nav__btn {
       display: block;
       top: 28px;
-      background: url("/img/icon-menu-open.svg") 50% 50% no-repeat;
+      background: #fff url("../img/icon-menu-open.svg") 50% 50% no-repeat;
     }
   }
   .main-nav--nojs {
