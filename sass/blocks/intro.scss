@@ -1,0 +1,38 @@
+.intro {
+  &__wrapper {
+  }
+  &__head {
+    @include container;
+    font: bold 27px/30px 'opensans';
+    padding-top: 96px;
+    padding-bottom: 96px;
+    text-align: center;
+    background: url("../img/hero-mobile@1x.jpg") 50% 50% no-repeat;
+    &--form, &--catalog{
+      background: #f1f1f1;
+      line-height: 177px;
+      padding: 0px;
+    }
+  }
+  &__text {
+    @include container;
+    font: 13px/24px 'opensans';
+    color: #444444;
+    margin-top: 20px;
+  }
+  &__features {
+    color: #fff;
+    font: bold 19px/24px 'opensans';
+    background: $bg-color-1 url("../img/icon-interior.svg") right 36px top 50% no-repeat;
+    &--dark {
+      background:  $bg-color-2 url("../img/icon-toy.svg") right 26px top 50% no-repeat;
+    }
+  }
+  &__link {
+    @include container;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    display: block;
+    cursor: pointer;
+  }
+}

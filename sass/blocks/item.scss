@@ -1,0 +1,23 @@
+.item {
+  margin-top: 27px;
+  border: 1px solid #ededed;
+  &__wrapp {
+    padding: 0 10%;
+  }
+  &__link {
+  }
+  &__name {
+    padding-top: 23px;
+    font: bold 17px/24px 'opensans';
+  }
+  &__desc {
+    font: 13px/30px 'opensans';
+    padding-top: 5px;
+  }
+  &__price {
+    border-top: 1px solid #ececec;
+    font: bold 15px/24px 'opensans';
+    margin-top: 19px;
+    padding: 21px 0 27px 0;
+  }
+}

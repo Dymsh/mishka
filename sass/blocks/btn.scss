@@ -1,0 +1,24 @@
+.btn {
+  display: block;
+  margin: auto;
+  border: 2px solid $col-grey;
+  text-transform: uppercase;
+  font: bold 17px/52px 'opensans';
+  text-align: center;
+  width: 260px;
+  background-color: transparent;
+  &__link {
+    display: block;
+  }
+  &:hover {
+    background: $col-grey;
+    color: #ffffff;
+  }
+  &:active {
+    background: $col-grey;
+    color: #7c7c7c;
+  }
+  &--catalog {
+  width: 190px;
+  }
+}
