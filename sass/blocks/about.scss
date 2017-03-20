@@ -1,14 +1,17 @@
 .about {
   &__wrapper {
     @include container;
+    padding-top: 30px;
   }
   &__head {
     font: bold 25px/30px 'opensans';
-    margin-top: 30px;
+  }
+  &__items {
+    padding-top: 86px;
   }
   &__item {
     position: relative;
-    padding-top: 85px;
+    padding-bottom: 83px;
     font: bold 17px/20px 'opensans';
     &:before {
       display: block;
@@ -16,13 +19,58 @@
       content: "";
       width: 42px;
       height: 74px;
-      top: 10px;
+      top: -74px;
       left: 0px;
     }
   }
+  &__item:last-child {
+    padding-bottom: 0px;
+  }
 }
-@for $i from 2 through 7 {
+@for $i from 1 through 6 {
   .about__item:nth-child(#{$i}):before {
-    background: url("../img/icon-feature-#{$i - 1}.svg") 50% 50% no-repeat;
+    background: url("../img/icon-feature-#{$i}.svg") 50% 50% no-repeat;
+  }
+}
+@media #{$tablet-width} {
+	.about {
+    &__wrapper {
+      padding-top: 55px;
+    }
+    &__items {
+      padding-top: 83px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__head {
+      padding-bottom: 20px;
+      font: bold 43px/50px 'opensans';
+    }
+    &__item {
+      padding-bottom: 110px;
+      padding-top: 0px;
+      font: bold 20px/22px 'opensans';
+      flex-basis: 334px;
+      flex-grow: 1;
+    }
+  }
+}
+@media #{$desktop-width} {
+  .about {
+    &__wrapper {
+      padding-top: 68px;
+    }
+    &__head {
+      padding-left: 175px;
+      padding-right: 175px;
+      font: bold 53px/57px 'opensans';
+    }
+    &__items {
+      padding-left: 175px; 
+      padding-right: 175px;
+    }
+    &__item {
+      flex-basis: 350px;
+    }
   }
 }

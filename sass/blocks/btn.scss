@@ -19,6 +19,17 @@
     color: #7c7c7c;
   }
   &--catalog {
-  width: 190px;
+    width: 190px;
+  }
+  &--form-flex {
+	@media #{$tablet-width} {
+	  margin: 0px;
+	  margin-top: 45px;
+	  width: 232px;
+	  height: 54px;
+	}
+	@media #{$desktop-width} {
+	  margin-left: 175px;
+	}
   }
 }

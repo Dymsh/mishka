@@ -1,19 +1,21 @@
 .contacts {
-  &__head {
+  &__wrapper {
     @include container;
-    font: bold 18px/30px 'opensans';
-    margin-top: 44px;
+    padding-top: 29px;
   }
+  &__head {
+    font: bold 18px/30px 'opensans';
+    }
   &__items {
-    @include container;
     display: flex;
     flex-wrap: wrap;
     font: 15px/30px 'opensans';
     color: #444444;
   }
   &__desc {
+    display: block;
     width: 70%;
-    margin-top: 35px;
+    margin-top: 25px;
   }
   &__link {
     border-bottom: 1px solid #62d1ba;
@@ -28,9 +30,84 @@
   }
   &__name {
     width: 30%;
-    margin-top: 35px;
+    margin-top: 25px;
   }
   &__map {
-    margin: 42px 0 40px 0;
+    margin: 70px 0 40px 0;
+  }
+}
+@media #{$tablet-width} {
+  .contacts {
+    &__wrapper {
+      padding-top: 62px;
+    }
+    &__head {
+      font: bold 43px/50px 'opensans';
+      &::after {
+        content: "";
+        width: 194px;
+        height: 340px;
+        top: 0px;
+        right: 0px;
+        background: #f00 url("../img/icon-flag.svg") 50% 50% no-repeat;
+      }
+    }
+    &__items {
+      font: 17px/30px 'opensans';
+      flex-wrap: nowrap;
+      padding-top: 48px;
+    }
+    &__name,
+    &__desc{
+      margin: 0;
+      flex-basis: 77px;
+      flex-grow: 1;
+    }
+    &__desc {
+      flex-basis: 257px;
+    }
+    &__map {
+      margin-top: 57px;
+      margin-bottom: 54px;
+    }
+  }
+  .btn--contacts {
+    width: 232px;
+    height: 52px;
+  }
+}
+@media #{$desktop-width} {
+  .contacts {
+    position: relative;
+    @include container;
+    padding-top: 10px;
+    display: flex;
+    &__wrapper {
+      width: auto;
+      padding-top: 140px;
+      padding-left: 175px;
+      flex-basis: 350px;
+    }
+    &__head {
+      font: bold 53px/57px 'opensans';
+    }
+    &__items {
+      flex-wrap: wrap;
+    }
+    &__name,
+    &__desc {
+      padding-bottom: 33px;
+    }
+    &__map {
+      width: 525px;
+      height: 461px;
+      margin:0;
+      margin-top: 67px; /*Проблема слияния запросов media => переопределение padding радительского блока*/
+    }
+  }
+  .btn--contacts {
+    position: absolute;
+    bottom:0px;
+    left: 175px;
   }
 }

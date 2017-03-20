@@ -1,12 +1,12 @@
 .goods-week {
-  color: #444444;
+  color: $col-grey;
   &__wrapper {
-  @include container;
+    @include container;
+    padding-top: 27px;
   }
   &__head {
     font: bold 25px/30px 'opensans';
-    padding-top: 27px;
-  }
+    }
   &__action {
     font: bold 17px/20px 'opensans';
     text-transform: uppercase;
@@ -16,6 +16,7 @@
   &__about {
     font: 15px/24px 'opensans';
     padding-top: 23px;
+    min-height: 72px;
   }
   &__desc {
     border-collapse: collapse;
@@ -33,7 +34,7 @@
   }
   &__image {
     margin-top: 28px;
-  text-align: center;
+    text-align: center;
   }
   &__price {
     text-align: center;
@@ -42,8 +43,91 @@
   &:after {
     display: block;
     content: "";
-    margin-top: 45px;
+    margin-top: 24px;
     height: 7px;
     background: #e4e4ff url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
+  }
+}
+@media #{$tablet-width} {
+  .goods-week {
+    &__wrapper {
+      padding-top: 60px;
+    }
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    } 
+    &__head {
+      font: bold 43px/50px 'opensans';
+    }
+    &__action {
+      width: 100px;
+      padding-top: 11px;
+      padding-right: 13px;
+      text-align: center;
+      font: bold 17px/17px 'opensans';
+    }
+    &__wrap-inner {
+      /*width: 290px;*/
+      padding-right: 378px;
+      position: relative;
+      padding-top: 50px;
+    }
+    &__image {
+      position: absolute;
+      width: 334px;
+      height: 400px;
+      top: 50px;
+      right: 0px;
+    }
+    &__desc {
+      margin-top: 36px;
+    }
+    &__price {
+      margin-top: 57px;
+      font: bold 20px/24px 'opensans';
+    }
+    &__about {
+      padding-top: 0px;
+      font: 17px/30px 'opensans';
+    }
+    .btn--goods {
+      width: 290px;
+      margin-top: 32px;
+    }
+    &:after {
+      margin-top: 54px;
+    }
+  }
+}
+@media #{$desktop-width} {
+  .goods-week {
+    &__wrapper {
+      padding-top: 142px;
+    }
+    &__header {
+      justify-content: flex-start;
+    }
+    &__wrap-inner {
+      padding-left: 175px;
+      padding-right: 585px;
+    }
+    &__head {
+      font: bold 53px/57px 'opensans';
+      order: 2;
+    }
+    &__action {
+      padding-left: 32px;
+      padding-right: 40px;
+    }
+    &__desc {
+      margin-top: 45px;
+    }
+    &__price {
+      margin-top: 113px;
+    }
+    &:after {
+    margin-top: 77px;
+    }
   }
 }

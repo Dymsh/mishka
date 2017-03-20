@@ -1,0 +1,23 @@
+.page {
+  margin: 0px;
+  padding: 0px;
+  min-width: 320px;
+  font: 15px 'opensans' , sans-serif;
+}
+
+$pattern: catalog;
+
+.page {
+  &--#{$pattern} {
+    background-position-x: 50%;
+    background: url("../pattern/#{$pattern}-mobile.jpg") no-repeat;
+    @media #{$tablet-width} {
+      background: url("../pattern/#{$pattern}-tablet.jpg") no-repeat;
+      background-position-x: 50%;
+    }
+    @media #{$desktop-width} {
+      background: url("../pattern/#{$pattern}-desktop.jpg") no-repeat;
+      background-position-x: 50%;
+    }
+  }
+}

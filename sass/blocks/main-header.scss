@@ -1,8 +1,10 @@
 .main-header {
   position: relative;
   border-bottom: 1px solid #ececec;
-  &__logo {
+  &__wrapper {
     @include container;
+  }
+  &__logo {
     padding-top: 22px;
     padding-bottom: 22px;
     width: $logo-width;
@@ -13,5 +15,28 @@
     &:active {
       color: b2b2b2;
     }
+  }
+}
+@media #{$tablet-width} {
+	.main-header {
+
+    &__wrapper {
+      display: flex; 
+      justify-content: space-between;
+    }
+    
+    &__logo {
+      margin: 0;
+      padding: 22px 0;
+    }
+  }
+}
+@media #{$desktop-width} {
+  .main-header__logo {
+    position: absolute;
+    padding: 0;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
