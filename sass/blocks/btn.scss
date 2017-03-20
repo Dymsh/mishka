@@ -31,12 +31,12 @@
   }
   &--form-flex {
     @media #{$tablet-width} {
-	  margin: 45px 0 0 0;
-	  width: 232px;
-	  height: 54px;
+    margin: 45px 0 0 0;
+    width: 232px;
+    height: 54px;
     }
     @media #{$desktop-width} {
-	  margin-left: 175px;
-    }		
+    margin-left: 175px;
+    }
   }
 }
