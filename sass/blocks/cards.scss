@@ -1,3 +1,77 @@
 .cards {
   @include container;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2px;
+  &__item {
+	margin-top: 27px;
+	border: 1px solid #ededed;
+  flex-basis: 700px;
+  flex-grow: 1;
+  }
+  &__item-name {
+    margin-top: 23px;
+    padding-left: 29px;
+    font: bold 17px/24px 'opensans';
+  }
+  &__desc {
+    font: 13px/30px 'opensans';
+    padding: 5px 0 0 28px;
+  }
+  &__price {
+    border-top: 1px solid #ececec;
+    font: bold 15px/24px 'opensans';
+    margin: 19px 28px 0 28px;
+    padding: 21px 0 27px 0;
+  }
+}
+@media #{$tablet-width} {
+  .cards {
+    padding-top: 54px;
+    &__item {
+      display: flex;
+      flex-grow: 1;
+      margin-bottom: 27px;
+      &__name {
+        font: bold 20px/24px 'opensans';
+      }
+    }
+    &__desc {
+      font: 15px/30px 'opensans';
+    }
+    &__image,
+    &__wrap-inner  {
+      flex-basis: 334px;
+    }
+    &__price {
+      font: bold 17px/24px 'opensans';
+      padding: 21px 0 27px 0;
+      margin: 0 32px;
+      margin-top: 177px;
+    }
+  }
+}
+@media #{$desktop-width} {
+  .cards {
+    padding-top: 105px;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    &__item {
+      flex-wrap: wrap;
+      flex-grow: 0;
+      flex-basis: 314px;
+    }
+    &__image {
+      flex-basis: 314px;
+      height: 463px; /* for image temp*/
+      flex-grow: 0;
+    }
+    &__wrap-inner {
+      flex-basis: 314px;
+      flex-grow: 0;
+    }
+    &__price {
+      margin-top: 37px;
+    }
+  } 
 }

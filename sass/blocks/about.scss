@@ -13,6 +13,9 @@
     position: relative;
     padding-bottom: 83px;
     font: bold 17px/20px 'opensans';
+  & br {
+    display: none;
+  }
     &:before {
       display: block;
       position: absolute;
@@ -52,6 +55,9 @@
       font: bold 20px/22px 'opensans';
       flex-basis: 334px;
       flex-grow: 1;
+      & br {
+        display: block;
+      }
     }
   }
 }

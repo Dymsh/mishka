@@ -9,60 +9,67 @@
   </head>
   <body class="page page--catalog">
     <header class="main-header">
-      <div class="main-header__logo">
-        <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="logo"></a>
+      <div class="main-header__wrapper">
+        <div class="main-header__logo">
+          <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="logo"></a>
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__btn" type="button"></button>
+            <ul class="main-nav__items">
+              <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+              <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+              <li class="main-nav__item main-nav__item--search"><a href="#">Поиск по сайту</a></li>
+              <li class="main-nav__item main-nav__item--basket"><a href="#">Корзина:<span> пока пуста</span></a></li>
+            </ul>
+        </nav>
       </div>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__btn" type="button"></button>
-          <ul class="main-nav__items">
-            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item main-nav__item--search"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item main-nav__item--basket"><a href="#">Корзина:<span> пока пуста</span></a></li>
-          </ul>
-      </nav>
     </header>
-    <div class="intro">
-      <h1 class="intro__head intro__head--catalog">Каталог товаров</h1>
+    <div class="page-name">
+      <div class="page-name__wrapper">
+        <span class="page-name__add-left"><a href="#">Новые поступления</a></span>
+        <span class="page-name__add-left"><a href="#">Распродажа</a></span>
+        <span class="page-name__add-right">Бесплатная доставка по Росии</span>
+        <h1 class="page-name__head">Каталог товаров</h1>
+      </div>
     </div>
     <div class="cards">
-      <div class="item">
-        <a class="item__link" href="#">
-            <img src="img/photo-1-mobile@1x.jpg" width="260" height="197" alt="goods image">
-            <p class="item__name item__wrapp">Зайчик-попрыгайчик</p>
-        </a>
-        <div class="item__wrapp">
-          <p class="item__desc">Рост 30 см, вес 200 г</p>
-          <div class="item__price">1 200 руб.</div>
-          <div class="item__basket"><a class="item__link-basket" href="#" id="basket-modal"></a></div>
+      <div class="cards__item">
+        <div class="cards__image">
+          <a href="#"><img src="img/photo-1-mobile@1x.jpg" width="260" height="197" alt="goods image"></a>
+        </div>
+        <div class="cards__wrap-inner">
+          <p class="cards__item-name"><a href="#">Зайчик-попрыгайчик</a></p>
+          <p class="cards__desc">Рост 30 см, вес 200 г</p>
+          <div class="cards__price">1 200 руб.</div>
+          <div class="cards__basket"><a  href="#" id="basket-modal"></a></div>
         </div>
       </div>
-      <div class="item">
-        <a class="item__link" href="#">
-            <img src="img/photo-2-mobile@1x.jpg" width="260" height="197" alt="goods image">
-            <p class="item__name item__wrapp">Корзинка для белья</p>
-        </a>
-        <div class="item__wrapp">
-          <p class="item__desc">Диметр 15 см, высота 10 см</p>
-          <div class="item__price">690 руб.</div>
-          <div class="item__basket"><a class="item__link-basket" href="#" id="basket-modal"></a></div>
+      <div class="cards__item">
+        <div class="cards__image">
+          <a href="#"><img src="img/photo-2-mobile@1x.jpg" width="260" height="197" alt="goods image"></a>
+        </div>
+        <div class="cards__wrap-inner">    
+          <p class="cards__item-name"><a href="#">Корзинка для белья</a></p>
+          <p class="cards__desc">Диметр 15 см, высота 10 см</p>
+          <div class="cards__price">690 руб.</div>
+          <div class="cards__basket"><a href="#" id="basket-modal"></a></div>
         </div>
       </div>
-      <div class="item">
-        <a class="item__link" href="#">
-            <img src="img/photo-3-mobile@1x.jpg" width="260" height="197" alt="goods image">
-            <p class="item__name item__wrapp">Большая корзинка для игрушек</p>
-        </a>
-        <div class="item__wrapp">
-          <p class="item__desc">Диаметр 30 см, выста 30 см</p>
-          <div class="item__price">1500 руб.</div>
-          <div class="item__basket"><a class="item__link-basket" href="#" id="basket-modal"></a></div>
+      <div class="cards__item">
+        <div class="cards__image">
+          <a href="#"><img src="img/photo-3-mobile@1x.jpg" width="260" height="197" alt="goods image"></a>
+        </div>
+        <div class="cards__wrap-inner">   
+          <p class="cards__item-name"><a href="#">Большая корзинка для игрушек</a></p>
+          <p class="cards__desc">Диаметр 30 см, выста 30 см</p>
+          <div class="cards__price">1500 руб.</div>
+          <div class="cards__basket"><a href="#" id="basket-modal"></a></div>
         </div>
       </div>
     </div>
     <section class="craft">
       <div class="craft__wrapper">
-        <p class="craft__title">Процесс производства</p>
+        <p class="craft__title">Процесс производства</p> 
         <video class="craft__video" controls="controls" src="http://placehold.it/260x150" poster="img/video-mobile@1x.jpg" width="260" height="150"></video>
         <p class="craft__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <button class="btn btn--catalog" type="button">сделать заказ</button>
@@ -70,6 +77,7 @@
     </section>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
+        <div class="main-footer__logo"><img src="../img/logo.svg" width="103" height="34" alt="logo"></div>
         <div class="social-links">
           <div class="social-links__item social-links__item--instagram"><a class="social-links__link" href="#"></a></div>
           <div class="social-links__item social-links__item--facebook"><a class="social-links__link" href="#"></a></div>

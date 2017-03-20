@@ -1,11 +1,14 @@
 .craft {
   @include container;
+  margin-top: 35px;
   &__wrapper {
-    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid #ededed;
     padding-bottom: 32px;
   }
   &__title {
+    flex-basis: 350px;
     position: relative;
     padding: 22px 0 22px 90px;
     font: bold 17px/24px 'opensans';
@@ -20,11 +23,53 @@
       background: url(../img/icon-video.svg) 50% 50% no-repeat;
     }
   }
-  &__video {
-  }
   &__description {
     font: 13px/24px 'opensans';
-    padding: 30px 32px 22px 32px;
+    padding: 30px 32px 46px 32px;
     color: $col-grey;
   }
+}
+@media #{$tablet-width} {
+  .craft {
+    margin-top: 27px;
+    padding-bottom: 24px;
+    &__wrapper {
+      padding-bottom: 43px;
+    }
+    &__video {
+      order: 1;
+      width: 668px;
+      height: 453px;
+    }
+    &__title {
+      order: 2;
+      padding: 39px 0 0 104px;
+      font-size: 20px;
+    }
+    &__description {
+      order: 3;
+      font: 15px/30px 'opensans';
+      padding: 31px 0 34px 0;
+    }
+  }
+}
+@media #{$desktop-width} {
+  .craft {
+    &__wrapper {
+      position: relative;
+      padding:0 0 58px 763px;
+    }
+    &__video {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    &__title {
+      padding: 98px 65px 0 0px;
+    }
+    &__description  {
+      padding-left: 0px;
+      padding-top: 33px;
+    }
+  } 
 }
