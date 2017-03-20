@@ -18,13 +18,11 @@
   }
 }
 @media #{$tablet-width} {
-	.main-header {
-
+  .main-header {
     &__wrapper {
-      display: flex; 
+      display: flex;
       justify-content: space-between;
     }
-    
     &__logo {
       margin: 0;
       padding: 22px 0;

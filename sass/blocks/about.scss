@@ -33,7 +33,7 @@
   }
 }
 @media #{$tablet-width} {
-	.about {
+  .about {
     &__wrapper {
       padding-top: 55px;
     }
@@ -66,7 +66,7 @@
       font: bold 53px/57px 'opensans';
     }
     &__items {
-      padding-left: 175px; 
+      padding-left: 175px;
       padding-right: 175px;
     }
     &__item {

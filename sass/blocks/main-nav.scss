@@ -10,7 +10,7 @@
     &:first-child {
       border-top: 1px solid #ececec;
     }
-    &--search::before, 
+    &--search::before,
     &--basket::before{
       content: "";
       position: absolute;
@@ -65,7 +65,7 @@
   }
 }
 @media #{$tablet-width} {
-	.main-nav {
+  .main-nav {
     &__btn {
       display: none;
     }

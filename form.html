@@ -32,7 +32,6 @@
         <h1 class="page-name__head">Вязание на заказ</h1>
       </div>
     </div>
-    
     <form class="query" action="https://echo.htmlacademy.ru/" method="post">
       <div class="query__wrapper">
         <p class="query__intro">
@@ -40,7 +39,6 @@
           Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
         </p>
       </div>
-      
       <div class="query__radio-btn">
         <div class="query__wrapper query__wrapper--flex-wrap">
           <div class="query__line"><span>тип</span></div>
@@ -52,7 +50,6 @@
           </div>
         </div>
       </div>
-        
       <div class="query__checkbox">
         <div class="query__wrapper query__wrapper--flex-wrap">
           <div class="query__line"><span>цвет</span></div>
@@ -72,7 +69,6 @@
           </div>
         </div>
       </div>
-      
       <div class="query__name">
         <div class="query__wrapper query__wrapper--flex-wrap">
           <div class="query__line"><span>фио</span></div>
@@ -83,16 +79,14 @@
           </div>
         </div>
       </div>
-      
       <div class="query__phone-email">
-        <div class="query__wrapper query__wrapper--flex-wrap"> 
+        <div class="query__wrapper query__wrapper--flex-wrap">
           <div class="query__line"><span>тел</span></div>
           <label class="query__tel-lab"><input class="query__tel" type="tel" name="tel" value="" placeholder="+7 XXX XX XX*"></label>
           <div class="query__line"><span>e-mail</span></div>
           <label class="query__email-lab"><input class="query__email" type="email" name="email" value="" placeholder="Ваш Email*"></label>
         </div>
-      </div>  
-      
+      </div>
       <div class="query__add-text">
         <div class="query__wrapper query__wrapper--flex-wrap">
           <div class="query__line"><span>доп</span></div>
@@ -101,7 +95,6 @@
           <button class="btn btn--form-flex" type="submit" value="form-send">отправить заказ</button>
         </div>
       </div>
-     
     </form>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
@@ -117,19 +110,19 @@
         </div>
       </div>
     </footer>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__btn');
-    navMain.classList.remove('main-nav--nojs');
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--open');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--open');
-      }
-    });
-  </script>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__btn');
+      navMain.classList.remove('main-nav--nojs');
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--open');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--open');
+        }
+      });
+    </script>
   </body>
 </html>

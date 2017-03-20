@@ -81,10 +81,10 @@
       border: none;
     }
     &::after {
-	  margin-top: 116px;
-	  height: 16px;
+    margin-top: 116px;
+    height: 16px;
     }
-  }  
+  }
   .btn--reviews {
     position: absolute;
     width: 167px;
@@ -95,7 +95,6 @@
 @media #{$desktop-width} {
   .reviews {
     &__wrapper {
-      
     }
     &__head {
       font: bold 53px/57px 'opensans';
