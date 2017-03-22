@@ -13,7 +13,7 @@
     padding: 22px 0 22px 90px;
     font: bold 17px/24px 'opensans';
     color: #000;
-    &:before {
+    &::before {
       content: "";
       position: absolute;
       top: 24px;
@@ -66,6 +66,10 @@
     }
     &__title {
       padding: 98px 65px 0 0px;
+      &::before {
+        left: -5px;
+        top: 41px;
+      }
     }
     &__description  {
       padding-left: 0px;

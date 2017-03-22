@@ -7,6 +7,12 @@
     padding-top: 17px;
     & a {
       padding: 0px;
+      &:hover {
+        color: #666666;
+      }
+      &:active {
+        color: #b2b2b2;
+      }
     }
   }
   &__wrapper {
@@ -25,20 +31,57 @@
     color: #444444;
     margin-top: 20px;
   }
-  &__item {
+  &__button {
     @include container;
     color: #fff;
     font: bold 19px/24px 'opensans';
-    background: $bg-color-1 url("../img/icon-interior.svg") right 36px top 50% no-repeat;
+    background: $bg-color-1;
+    &:hover {
+      position: relative;
+      bottom: 5px;
+      box-shadow: 0 5px 0 0 #59d5bc;
+      background: #59d5bc;
+      & .intro__icon {
+        fill: #3bb09d;
+      }  
+    }
+    &:active {
+      color:8be2d0;
+      & .intro__icon {
+        fill: #29a592;
+      }  
+    }
     &--dark {
-      background:  $bg-color-2 url("../img/icon-toy.svg") right 26px top 50% no-repeat;
+      background:  $bg-color-2;
+      &:hover {
+        box-shadow: 0 5px 0 0 #46c1ae;
+        background:  #46c1ae;
+        & .intro__icon--dark {
+          fill: #239f8e;
+        }
+      }
+      &:active {
+        color: #7ed4c6;
+        & .intro__icon--dark {
+          fill: #37b2a0;
+        }
+      }
     }
   }
   &__link {
-    padding-top: 27px;
-    padding-bottom: 27px;
-    display: block;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  &__icon {
+    fill: #3bb09d;
+    &--dark {
+      position: relative;
+      padding: 1px 0;
+      left:10px;
+      fill: #35a999;
+    }
   }
 }
 @media #{$tablet-width} {
@@ -57,11 +100,11 @@
       padding-top: 154px;
       padding-bottom: 374px;
     }
-    &__items {
+    &__buttons {
       @include container;
       display: flex;
     }
-    &__item {
+    &__button {
       flex-basis: 334px;
       flex-grow: 1;
       padding: 0 37px;

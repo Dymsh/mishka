@@ -103,6 +103,7 @@
     padding-left: 64px;
     line-height: 36px;
     margin-bottom: 25px;
+    cursor: pointer;
     &:before {
       content: "";
       position: absolute;
@@ -146,8 +147,11 @@
     margin: 6px 0 -12px 0;
   }
   &__text-lab {
-    font: bold 17px/18px 'opensans';
+    font: 17px/18px 'opensans';
     display: block;
+    & span {
+      font-weight: bold;
+    }
   }
   &__text {
     @include input;
@@ -157,25 +161,50 @@
       border-bottom: 2px solid #62d1ba;
     }
   }
-  /*                                     tel                          */
-  &__tel {
+  /*                                     tel  + mail                        */
+  &__tel, 
+  &__email  {
     @include input;
-    padding: 0px 0 13px 0;
-    &:hover, &:focus {
-      border-bottom: 2px solid #62d1ba;
-    }
-  }
+    padding: 0 45px 18px 0;
+  }  
   &__tel-lab,
   &__email-lab  {
-    display: block;
-    margin: 0 0 10px 0;
+    position: relative;
+    margin-bottom: 10px;
     flex-grow: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      right: 8px;
+      bottom: 20px;
+      background: url("../img/icon-phone.svg") 50% 50% no-repeat;
+    }
+    &:hover, 
+    &:focus {
+      .query__tel,
+      .query__email {
+        border-bottom: 2px solid #62d1ba;
+      }
+      &::after {
+        background: url("../img/icon-phone-hover.svg") 50% 50% no-repeat;
+      }
+    }
   }
-  /*                                     email                          */
-    &__email {
-    @include input;
-    padding: 0px 0 18px 0;
-  }
+  &__email-lab {
+    &::after {
+      width: 32px;
+      height: 32px;
+      right: 4px;
+      bottom: 12px;
+      background: url("../img/icon-mail.svg") 50% 50% no-repeat;
+    }
+    &:hover,
+    &:focus {
+      &::after {background: url("../img/icon-mail-hover.svg") 50% 50% no-repeat;}
+    }
+  } 
     /*                                     add                         */
   &__add {
     border: 2px solid #000;
@@ -274,33 +303,36 @@
 /*                              checkbox            */
     &__name {
       font: bold 19px/19px 'opensans';
-      padding-top: 44px;
+      padding: 44px 0 13px 0;
     }
     &__text-wrap {
-      padding-top: 15px;
       flex-grow: 1;
     }
     &__text-lab {
       display: flex;
-      padding-bottom: 15px;
+      margin-bottom: 24px;
+      font: 19px/19px 'opensans';
       & span {
-        padding-right: 23px;
+        padding: 15px 36px 0 0;
       }
     }
     &__text {
-      padding-top: 0px;
+      font: 19px/19px 'opensans';
+      padding: 11px 15px 13px 15px;
+      margin: 0px;
     }
-/*                              phone-email            */
+/*                              tel + email            */
     &__phone-email {
       margin-top: 25px; /* temp */
       padding-top: 44px;
-      padding-bottom: 42px;
+      padding-bottom: 35px;
     }
     &__tel-lab,
     &__email-lab {
       flex-basis:501px;
       flex-grow: 1;
       padding-top: 21px;
+      margin-bottom: 15px;
     }
     &__tel,
     &__email {

@@ -5,19 +5,34 @@
     @include container;
   }
   &__copyright {
-    display: flex;
     border-top: 1px solid #e5e5e5;
     padding: 22px 0;
+    width: 184px;
+    margin: auto;
   }
-  &__copy-text {
+  &__icon {
+    fill: #63d1bb;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font: bold 19px/34px 'opensans';
-    width: 75%;
-    text-align: center;
+    &:hover {
+      .main-footer__icon {
+        fill: #46c1ae;
+      }
+    }
+    &:active {
+      color: #a8a8a8;
+      & .main-footer__icon {
+        fill: #bde3dd;
+      }
+    }
   }
   &__copy-logo {
     width: 27px;
     height: 34px;
-    background: url("../img/logo-htmlacademy.svg") 50% 50% no-repeat;
   }
   &__logo{
     display: none;
@@ -39,6 +54,7 @@
     &__copyright {
       border: none;
       flex-basis: 186px;
+      margin: 0;
     }
     &__logo {
       align-self: center;

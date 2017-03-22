@@ -5,13 +5,13 @@
   display: flex;
   justify-content: space-between;
   &__link {
-    display: block;
+    display: flex;
     height: 30px;
   }
   &__item {
     width: 30px;
     height: 30px;
-    &--instagram {
+    /*&--instagram {
       background: url("../img/icon-insta.svg") 50% 50% no-repeat;
     }
     &--facebook {
@@ -19,6 +19,16 @@
     }
     &--twitter {
       background: url("../img/icon-twitter.svg") 50% 50% no-repeat;
+    }*/
+  }
+  &__icon {
+    margin: auto;
+    fill: #231F20;
+    &:hover {
+      fill: #51c4b2;
+    }
+    &:active {
+      fill: #c1e3de;
     }
   }
 }

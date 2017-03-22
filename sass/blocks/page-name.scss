@@ -15,6 +15,12 @@
     padding-top: 17px;
     & a {
       padding: 0px;
+      &:hover {
+        color: #666666;
+      }
+      &:active {
+        color: #b2b2b2;
+      }
     }
   }
 }

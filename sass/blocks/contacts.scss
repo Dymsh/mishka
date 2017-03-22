@@ -42,14 +42,16 @@
       padding-top: 62px;
     }
     &__head {
+      position: relative;
       font: bold 43px/50px 'opensans';
       &::after {
         content: "";
-        width: 194px;
-        height: 340px;
-        top: 0px;
+        position: absolute;
+        width: 47px;
+        height: 81px;
+        top: -16px;
         right: 0px;
-        background: #f00 url("../img/icon-flag.svg") 50% 50% no-repeat;
+        background: url("../img/icon-flag.svg") 50% 50% no-repeat;
       }
     }
     &__items {
@@ -90,6 +92,10 @@
     }
     &__head {
       font: bold 53px/57px 'opensans';
+      &::after {
+        top: -9px;
+        left: -112px;
+      }
     }
     &__items {
       flex-wrap: wrap;
