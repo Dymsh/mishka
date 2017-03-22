@@ -162,11 +162,11 @@
     }
   }
   /*                                     tel  + mail                        */
-  &__tel, 
+  &__tel,
   &__email  {
     @include input;
     padding: 0 45px 18px 0;
-  }  
+  }
   &__tel-lab,
   &__email-lab  {
     position: relative;
@@ -181,7 +181,7 @@
       bottom: 20px;
       background: url("../img/icon-phone.svg") 50% 50% no-repeat;
     }
-    &:hover, 
+    &:hover,
     &:focus {
       .query__tel,
       .query__email {
@@ -204,7 +204,7 @@
     &:focus {
       &::after {background: url("../img/icon-mail-hover.svg") 50% 50% no-repeat;}
     }
-  } 
+  }
     /*                                     add                         */
   &__add {
     border: 2px solid #000;
