@@ -1,3 +1,6 @@
+fieldset {
+  border: none;
+}
 .query {
   &__wrapper {
     @include container;
