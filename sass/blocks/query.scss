@@ -6,13 +6,12 @@ fieldset {
     @include container;
     display: flex;
     &--flex-wrap {
-      flex-wrap: wrap;
+      flex-direction: column;
     }
   }
   &__line {
     display: flex;
-    flex-grow:1;
-    flex-basis: 450px;
+    
     font: bold 16px/60px 'opensans';
     text-transform: uppercase;
     color: $bg-color-1;
@@ -232,8 +231,17 @@ fieldset {
 }
 @media #{$tablet-width} {
   .query {
+    &__wrapper {
+      &--flex-wrap {
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+      }
+      &--flex-column {
+        flex-direction: column;
+      }
+    }
     &__line {
-      flex-grow:0;
       flex-basis: 167px;
       & span {
         margin: 0;

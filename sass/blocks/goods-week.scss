@@ -3,6 +3,7 @@
   &__wrapper {
     @include container;
     padding-top: 27px;
+    padding-bottom: 24px;
   }
   &__head {
     font: bold 25px/30px 'opensans';
@@ -30,8 +31,12 @@
     height: 39px;
   }
   &__image {
+    margin: 0 auto;
     margin-top: 28px;
-    text-align: center;
+    width: 260px;
+    height: 315px;
+    border: 1px solid red; /* temp */
+    box-sizing: border-box; /* temp */
   }
   &__price {
     text-align: center;
@@ -40,8 +45,7 @@
   &:after {
     display: block;
     content: "";
-    margin-top: 24px;
-    height: 7px;
+    height: 14px;
     background: #e4e4ff url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
   }
 }
@@ -49,6 +53,7 @@
   .goods-week {
     &__wrapper {
       padding-top: 60px;
+      padding-bottom: 50px;
     }
     &__header {
       display: flex;
@@ -67,14 +72,15 @@
     &__wrap-inner {
       /*width: 290px;*/
       padding-right: 378px;
+      /* display: flex;*/
       position: relative;
       padding-top: 50px;
     }
     &__image {
       position: absolute;
       width: 334px;
-      height: 400px;
-      top: 50px;
+      height: 404px;
+      top: 27px;
       right: 0px;
     }
     &__desc {
@@ -92,15 +98,13 @@
       width: 290px;
       margin-top: 32px;
     }
-    &:after {
-      margin-top: 54px;
-    }
   }
 }
 @media #{$desktop-width} {
   .goods-week {
     &__wrapper {
       padding-top: 142px;
+      padding-bottom: 77px;
     }
     &__header {
       justify-content: flex-start;
@@ -123,8 +127,11 @@
     &__price {
       margin-top: 113px;
     }
-    &:after {
-    margin-top: 77px;
+    &__image {
+      width: 525px;
+      height: 635px;
+      top: -139px;
+      z-index: -1;
     }
   }
 }
