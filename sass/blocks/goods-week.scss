@@ -80,7 +80,7 @@
       position: absolute;
       width: 334px;
       height: 404px;
-      top: 27px;
+      bottom: 0px;
       right: 0px;
     }
     &__desc {
@@ -130,7 +130,6 @@
     &__image {
       width: 525px;
       height: 635px;
-      top: -139px;
       z-index: -1;
     }
   }

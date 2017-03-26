@@ -49,7 +49,7 @@
     &__description {
       order: 3;
       font: 15px/30px 'opensans';
-      padding: 31px 0 34px 0;
+      padding: 31px 36px 34px 43px;
     }
   }
 }
@@ -73,6 +73,7 @@
     }
     &__description  {
       padding-left: 0px;
+      padding-right: 0px;
       padding-top: 33px;
     }
   }
