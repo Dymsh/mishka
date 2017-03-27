@@ -1,38 +1,129 @@
 .intro {
-  &__wrapper {
-  }
-  &__head {
-    @include container;
-    font: bold 27px/30px 'opensans';
-    padding-top: 96px;
-    padding-bottom: 96px;
-    text-align: center;
-    background: url("../img/hero-mobile@1x.jpg") 50% 50% no-repeat;
-    &--form, &--catalog{
-      background: #f1f1f1;
-      line-height: 177px;
+    background: url(../img/hero-mobile@1x.jpg) no-repeat;
+    background-position-x: 50%;
+  &__add-right,
+  &__add-left{
+    display: none;
+    padding-top: 17px;
+    & a {
       padding: 0px;
+      &:hover {
+        color: #666666;
+      }
+      &:active {
+        color: #b2b2b2;
+      }
     }
   }
-  &__text {
+  &__wrapper {
     @include container;
+  }
+  &__head {
+    width: 260px;
+    margin: 0 auto;
+    font: bold 27px/30px 'opensans';
+    padding-top: 67px;
+    padding-bottom: 121px;
+    text-align: center;
+  }
+  &__text {
     font: 13px/24px 'opensans';
     color: #444444;
     margin-top: 20px;
   }
-  &__features {
+  &__button {
+    @include container;
     color: #fff;
     font: bold 19px/24px 'opensans';
-    background: $bg-color-1 url("../img/icon-interior.svg") right 36px top 50% no-repeat;
+    background: $bg-color-1;
+    &:hover {
+      position: relative;
+      bottom: 5px;
+      box-shadow: 0 5px 0 0 #59d5bc;
+      background: #59d5bc;
+      & .intro__icon {
+        fill: #3bb09d;
+      }
+    }
+    &:active {
+      color:8be2d0;
+      & .intro__icon {
+        fill: #29a592;
+      }
+    }
     &--dark {
-      background:  $bg-color-2 url("../img/icon-toy.svg") right 26px top 50% no-repeat;
+      background:  $bg-color-2;
+      &:hover {
+        box-shadow: 0 5px 0 0 #46c1ae;
+        background:  #46c1ae;
+        & .intro__icon--dark {
+          fill: #239f8e;
+        }
+      }
+      &:active {
+        color: #7ed4c6;
+        & .intro__icon--dark {
+          fill: #37b2a0;
+        }
+      }
     }
   }
   &__link {
-    @include container;
-    padding-top: 27px;
-    padding-bottom: 27px;
-    display: block;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  &__icon {
+    fill: #3bb09d;
+    &--dark {
+      position: relative;
+      padding: 1px 0;
+      left:10px;
+      fill: #35a999;
+    }
+  }
+}
+@media #{$tablet-width} {
+  .intro {
+    background-size: cover;
+    &__add-right {
+      display: block;
+      @include clearfix;
+      float: right;
+      color: $col-grey;
+      font: 15px/24px 'opensans';
+    }
+    &__head {
+      width: 600px;
+      font: bold 43px/50px 'opensans';
+      padding-top: 154px;
+      padding-bottom: 374px;
+    }
+    &__buttons {
+      @include container;
+      display: flex;
+    }
+    &__button {
+      flex-basis: 334px;
+      flex-grow: 1;
+      padding: 0 37px;
+    }
+  }
+}
+@media #{$desktop-width} {
+  .intro {
+    &__head {
+      font: bold 53px/57px 'opensans';
+      padding-top: 153px;
+      padding-bottom: 359px;
+    }
+    &__add-left{
+      display: block;
+      float: left;
+      color: #000;
+      font: bold 15px/24px 'opensans';
+      padding-right: 60px;
+    }
   }
 }

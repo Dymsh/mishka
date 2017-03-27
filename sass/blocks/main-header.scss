@@ -1,17 +1,19 @@
 .main-header {
   position: relative;
   border-bottom: 1px solid #ececec;
-  &__logo {
-    @include container;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    width: $logo-width;
-    margin: auto;
-    &:hover {
-      color: #666666;
-    }
-    &:active {
-      color: b2b2b2;
+  border-top: 1px solid #ececec;
+}
+@media #{$tablet-width} {
+  .main-header {
+    border-top: none;
+    height: 89px;
+    &__wrapper {
+      @include container;
+      display: flex;
+      position: relative;
+      justify-content: space-between;
     }
   }
+}
+@media #{$desktop-width} {
 }

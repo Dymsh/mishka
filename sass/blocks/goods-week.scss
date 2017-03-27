@@ -1,12 +1,13 @@
 .goods-week {
-  color: #444444;
+  color: $col-grey;
   &__wrapper {
-  @include container;
+    @include container;
+    padding-top: 27px;
+    padding-bottom: 24px;
   }
   &__head {
     font: bold 25px/30px 'opensans';
-    padding-top: 27px;
-  }
+    }
   &__action {
     font: bold 17px/20px 'opensans';
     text-transform: uppercase;
@@ -16,6 +17,7 @@
   &__about {
     font: 15px/24px 'opensans';
     padding-top: 23px;
+    min-height: 72px;
   }
   &__desc {
     border-collapse: collapse;
@@ -28,12 +30,13 @@
     border-bottom: 1px solid #ececec;
     height: 39px;
   }
-  &__par {
-    padding-right:30px;
-  }
   &__image {
+    margin: 0 auto;
     margin-top: 28px;
-  text-align: center;
+    width: 260px;
+    height: 315px;
+    border: 1px solid red; /* temp */
+    box-sizing: border-box; /* temp */
   }
   &__price {
     text-align: center;
@@ -42,8 +45,92 @@
   &:after {
     display: block;
     content: "";
-    margin-top: 45px;
-    height: 7px;
+    height: 14px;
     background: #e4e4ff url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
+  }
+}
+@media #{$tablet-width} {
+  .goods-week {
+    &__wrapper {
+      padding-top: 60px;
+      padding-bottom: 50px;
+    }
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__head {
+      font: bold 43px/50px 'opensans';
+    }
+    &__action {
+      width: 100px;
+      padding-top: 11px;
+      padding-right: 13px;
+      text-align: center;
+      font: bold 17px/17px 'opensans';
+    }
+    &__wrap-inner {
+      /*width: 290px;*/
+      padding-right: 378px;
+      /* display: flex;*/
+      position: relative;
+      padding-top: 50px;
+    }
+    &__image {
+      position: absolute;
+      width: 334px;
+      height: 404px;
+      bottom: 0px;
+      right: 0px;
+    }
+    &__desc {
+      margin-top: 36px;
+    }
+    &__price {
+      margin-top: 57px;
+      font: bold 20px/24px 'opensans';
+    }
+    &__about {
+      padding-top: 0px;
+      font: 17px/30px 'opensans';
+    }
+    .btn--goods {
+      width: 290px;
+      margin-top: 32px;
+    }
+  }
+}
+@media #{$desktop-width} {
+  .goods-week {
+    &__wrapper {
+      padding-top: 142px;
+      padding-bottom: 77px;
+    }
+    &__header {
+      justify-content: flex-start;
+    }
+    &__wrap-inner {
+      padding-left: 175px;
+      padding-right: 585px;
+    }
+    &__head {
+      font: bold 53px/57px 'opensans';
+      order: 2;
+    }
+    &__action {
+      padding-left: 32px;
+      padding-right: 40px;
+    }
+    &__desc {
+      margin-top: 45px;
+    }
+    &__price {
+      margin-top: 113px;
+    }
+    &__image {
+      width: 525px;
+      height: 635px;
+      z-index: -1;
+    }
   }
 }

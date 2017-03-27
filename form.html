@@ -7,92 +7,152 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
-  <body class="page">
+  <body class="page page--form">
     <header class="main-header">
-      <div class="main-header__logo">
-          <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="logo"></a>
-      </div>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__btn" type="button"></button>
-          <ul class="main-nav__items">
-            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item main-nav__item--search"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item main-nav__item--basket"><a href="#">Корзина:<span> пока пуста</span></a></li>
+      <div class="main-header__wrapper">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <div class="main-nav__logo">
+            <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="logo"></a>
+          </div>
+          <button class="main-nav__btn" type="button"></button>
+          <ul class="main-nav__items-page">
+            <li class="main-nav__item main-nav__item--catalog"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item main-nav__item--form"><a href="form.html">Вязание на заказ</a></li>
           </ul>
-      </nav>
+          <ul class="main-nav__items-goods">
+            <li class="main-nav__item main-nav__item--search">
+              <a href="#">
+                <svg class="main-nav__icon" width="19" height="19" viewBox="-0.8 -0.8 17.6 17.6"><use xlink:href="img/icon-search.svg#search"></use></svg>
+                <span>Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--basket">
+              <a href="#">
+                <svg class="main-nav__icon main-nav__icon--basket" width="21" height="19" viewBox="264.205 370.961 20.294 18.849"><use xlink:href="img/icon-cart.svg#basket"></use></svg>
+                <span>Корзина: пока пуста</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="main-nav__items-add">
+            <li class="main-nav__addition-left"><a href="">Новые поступления</a></li>
+            <li class="main-nav__addition-left"><a href="">Распродажа</a></li>
+            <li class="main-nav__addition-right"><a href="">Бесплатная доставка по России</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <div class="intro">
-      <h1 class="intro__head intro__head--form">Вязание на заказ</h1>
-      <p class="intro__text">
-        Мы будем рады воплотить в жизнь ваши пожелания!
-        Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-      </p>
-    </div>
-    <form class="query" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="query__line"><span>тип</span></div>
-      <div class="query__radio-wrap">
-        <input id="radio-1" class="query__radio" type="radio" name="g-type" value="thing-for-home" checked>
-        <label for="radio-1" class="query__radio-lab">Аксессуар для интерьера</label>
-        <input id="radio-2" class="query__radio" type="radio" name="g-type" value="kids-game">
-        <label for="radio-2" class="query__radio-lab">Детская игрушка</label>
+    <main>
+      <div class="page-name">
+        <div class="page-name__wrapper">
+          <h1 class="page-name__head">Вязание на заказ</h1>
+        </div>
       </div>
-      <div class="query__line"><span>цвет</span></div>
-      <div class="query__check-wrap">
-        <input id="col-w" class="query__check" type="checkbox" name="color[]" value="white" checked>
-        <label for="col-w" class="query__check-lab">Белый</label>
-        <input id="col-g" class="query__check" type="checkbox" name="color[]" value="grey" checked>
-        <label for="col-g" class="query__check-lab">Серый</label>
-        <input id="col-t" class="query__check" type="checkbox" name="color[]" value="tifani">
-        <label for="col-t" class="query__check-lab">"Тиффани"</label>
-        <input id="col-b" class="query__check" type="checkbox" name="color[]" value="black">
-        <label for="col-b" class="query__check-lab">Черный</label>
-        <input id="col-p" class="query__check" type="checkbox" name="color[]" value="pink">
-        <label for="col-p" class="query__check-lab">Розовый</label>
-        <input id="col-o" class="query__check" type="checkbox" name="color[]" value="orange">
-        <label for="col-o" class="query__check-lab">Оранжевый</label>
-      </div>
-      <div class="query__line"><span>фио</span></div>
-        <div class="query__text-wrap">
-        <label class="query__text-lab">Имя:<input class="query__text" type="text" name="firstname" value="" placeholder="Введите ваше имя*"></label>
-        <label class="query__text-lab">Фамилия:<input class="query__text" type="text" name="secondname" value="" placeholder="Укажите фамилию*"></label>
-        <label class="query__text-lab">Отчество:<input class="query__text" type="text" name="middlename" value="" placeholder="Отчество если желаете"></label>
-      </div>
-      <div class="query__line"><span>тел</span></div>
-      <label class="query__tel-lab"><input class="query__tel" type="tel" name="tel" value="" placeholder="+7 XXX XX XX*"></label>
-      <div class="query__line"><span>e-mail</span></div>
-      <label class="query__email-lab"><input class="query__email" type="email" name="email" value="" placeholder="Ваш Email*"></label>
-      <div class="query__line"><span>доп</span></div>
-      <textarea class="query__add" name="add" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-      <small class="query__note"><sup>*</sup>Поля обязателные для заполнения</small>
-      <button class="btn" type="submit" value="form-send">отправить заказ</button>
-    </form>
+      <form class="query" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="query__wrapper">
+          <p class="query__intro">
+            Мы будем рады воплотить в жизнь ваши пожелания!
+            Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+          </p>
+        </div>
+        <fieldset class="query__radio-btn">
+          <div class="query__wrapper query__wrapper--flex-wrap">
+            <div class="query__line"><span>тип</span></div>
+            <div class="query__radio-wrap">
+              <input id="radio-1" class="query__radio" type="radio" name="g-type" value="thing-for-home" checked>
+              <label for="radio-1" class="query__radio-lab">Аксессуар для интерьера</label>
+              <input id="radio-2" class="query__radio" type="radio" name="g-type" value="kids-game">
+              <label for="radio-2" class="query__radio-lab">Детская игрушка</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="query__checkbox">
+          <div class="query__wrapper query__wrapper--flex-wrap">
+            <div class="query__line"><span>цвет</span></div>
+            <div class="query__wrap-inner">
+              <input id="col-w" class="query__check" type="checkbox" name="color[]" value="white" checked>
+              <label for="col-w" class="query__check-lab">Белый</label>
+              <input id="col-g" class="query__check" type="checkbox" name="color[]" value="grey" checked>
+              <label for="col-g" class="query__check-lab">Серый</label>
+              <input id="col-t" class="query__check" type="checkbox" name="color[]" value="tifani">
+              <label for="col-t" class="query__check-lab">"Тиффани"</label>
+              <input id="col-b" class="query__check" type="checkbox" name="color[]" value="black">
+              <label for="col-b" class="query__check-lab">Черный</label>
+              <input id="col-p" class="query__check" type="checkbox" name="color[]" value="pink">
+              <label for="col-p" class="query__check-lab">Розовый</label>
+              <input id="col-o" class="query__check" type="checkbox" name="color[]" value="orange">
+              <label for="col-o" class="query__check-lab">Оранжевый</label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="query__name">
+          <div class="query__wrapper query__wrapper--flex-wrap">
+            <div class="query__line"><span>фио</span></div>
+            <div class="query__text-wrap">
+              <label class="query__text-lab"><span>Имя:</span><input class="query__text" type="text" name="firstname" value="" placeholder="Введите ваше имя*" required></label>
+              <label class="query__text-lab"><span>Фамилия:</span><input class="query__text" type="text" name="secondname" value="" placeholder="Укажите фамилию*" required></label>
+              <label class="query__text-lab"><span>Отчество:</span><input class="query__text" type="text" name="middlename" value="" placeholder="Отчество если желаете"></label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="query__phone-email">
+          <div class="query__wrapper query__wrapper--flex-wrap">
+            <div class="query__line"><span>тел</span></div>
+            <label class="query__tel-lab"><input class="query__tel" type="tel" name="tel" value="" placeholder="+7 XXX XX XX*" pattern="2-[0-9]{3}-[0-9]{3}" required></label>
+            <div class="query__line"><span>e-mail</span></div>
+            <label class="query__email-lab"><input class="query__email" type="email" name="email" value="" placeholder="Ваш Email*" required></label>
+          </div>
+        </fieldset>
+        <fieldset class="query__add-text">
+          <div class="query__wrapper query__wrapper--flex-wrap">
+            <div class="query__line"><span>доп</span></div>
+            <textarea class="query__add" name="add" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <small class="query__note"><sup>*</sup>Поля обязателные для заполнения</small>
+            <button class="btn btn--form-flex" type="submit" value="form-send">отправить заказ</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
+        <div class="main-footer__logo"><img src="../img/logo.svg" width="103" height="34" alt="logo"></div>
         <div class="social-links">
-          <div class="social-links__item social-links__item--instagram"><a class="social-links__link" href="#"></a></div>
-          <div class="social-links__item social-links__item--facebook"><a class="social-links__link" href="#"></a></div>
-          <div class="social-links__item social-links__item--twitter"><a class="social-links__link" href="#"></a></div>
+          <div class="social-links__item">
+            <a class="social-links__link" href="#">
+              <svg class="social-links__icon" width="22" height="22" viewBox="53.115 53.19 21.769 21.334"><use  xlink:href="img/icon-insta.svg#instagram"></use></svg>
+            </a>
+          </div>
+          <div class="social-links__item">
+            <a class="social-links__link" href="#">
+              <svg class="social-links__icon" width="15" height="28" viewBox="56.519 49.996 14.962 27.718"><use xlink:href="img/icon-fb.svg#facebook"></use></svg>
+            </a>
+          </div>
+          <div class="social-links__item">
+            <a class="social-links__link" href="#">
+              <svg class="social-links__icon" width="24" height="20" viewBox="52.253 53.771 23.494 20.168"><use xlink:href="img/icon-twitter.svg#twitter"></use></svg>
+            </a>
+          </div>
         </div>
         <div class="main-footer__copyright">
-          <p class="main-footer__copy-text">Разработано</p>
-          <div class="main-footer__copy-logo"></div>
+          <a href="#" class="main-footer__link">
+            <span>Разработано</span>
+            <svg class="main-footer__icon" width="27" height="34"><use xlink:href="img/logo-htmlacademy.svg#logo-htmlacademy"></use></svg>
+          </a>
         </div>
       </div>
     </footer>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__btn');
-    navMain.classList.remove('main-nav--nojs');
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--open');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--open');
-      }
-    });
-  </script>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__btn');
+      navMain.classList.remove('main-nav--nojs');
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--open');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--open');
+        }
+      });
+    </script>
   </body>
 </html>

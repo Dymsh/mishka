@@ -1,24 +1,26 @@
 .reviews {
   color: $col-grey;
   &__wrapper {
-  @include container;
+    @include container;
+    padding-top: 52px;
+    padding-bottom: 45px;
   }
   &__head {
     font: bold 25px/30px 'opensans';
-    margin-top: 52px;
   }
-  &__item {
+  &__text {
     font: 15px/30px 'opensans';
-    margin-top: 25px;
+    padding-top: 25px;
   }
   &__name {
     font: bold 17px/20px 'opensans';
-    margin-top: 55px;
+    padding-top: 28px;
     color: #000;
   }
   &__email {
+    display: block;
     font: 15px/17px 'opensans';
-    margin-top: 16px;
+    padding-top: 16px;
   }
   &__nav-wrap {
     display: flex;
@@ -28,23 +30,96 @@
   &__nav {
     flex-basis: 50%;
     height: 50px;
-    &--left {
-      background: url("../img/icon-left-arrow.svg") 50% 50% no-repeat;
-    }
     &--right {
-      background: url("../img/icon-right-arrow.svg") 50% 50% no-repeat;
       border-left: 1px solid #ececec;
     }
   }
-  &__nav-link {
-    display: block;
-    height: 50px;
+  &__icon {
+    margin: auto;
+    fill: #000;
   }
-  &:after {
+  &__nav-link {
+    display: flex;
+    height: 50px;
+    &:hover {
+      .reviews__icon {
+        fill: #666666;
+      }
+    }
+    &:active {
+      .reviews__icon {
+        fill: #b2b2b2;
+      }
+    }
+  }
+  &::after {
     display: block;
     content: "";
-    margin-top: 45px;
     height: 7px;
     background: #e4e4ff url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
+  }
+}
+@media #{$tablet-width} {
+  .reviews {
+    margin-top: -28px;
+    &__wrapper {
+      background: url("../img/review@1x.jpg") 0 -80px no-repeat;
+      background-origin: content-box;
+      position: relative;
+      padding-top: 80px;
+      padding-bottom: 116px;
+    }
+    &__head {
+      font: bold 43px/50px 'opensans';
+    }
+    &__text {
+      font-size: 17px;
+      padding-top: 49px;
+    }
+    &__name {
+      padding: 0px;
+    }
+    &__bottom {
+      padding-top:60px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__nav-wrap {
+      flex-basis: 167px;
+      border: none;
+      margin: 0px;
+    }
+    &__nav {
+      border: none;
+    }
+    &::after {
+    height: 16px;
+    }
+  }
+  .btn--reviews {
+    position: absolute;
+    width: 167px;
+    top: 80px;
+    right: 0px;
+  }
+}
+@media #{$desktop-width} {
+  .reviews {
+    &__wrapper {
+      padding-bottom: 164px;
+    }
+    &__head {
+      font: bold 53px/57px 'opensans';
+      padding-left: 175px;
+    }
+    &__text {
+      padding-left: 175px;
+    }
+    &__bottom {
+      padding: 41px 0 0 175px;
+    }
+    &::after{
+      height: 23px;
+    }
   }
 }

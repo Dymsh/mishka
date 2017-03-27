@@ -1,14 +1,23 @@
+fieldset {
+  border: none;
+}
 .query {
-  @include container;
+  &__wrapper {
+    @include container;
+    display: flex;
+    &--flex-wrap {
+      flex-direction: column;
+    }
+  }
   &__line {
     display: flex;
     font: bold 16px/60px 'opensans';
     text-transform: uppercase;
     color: $bg-color-1;
-    & span:first-child{
+    & span {
       margin-right: 30px;
     }
-    &:after{
+    &::after{
       content: "";
       display: block;
       flex-grow: 1;
@@ -16,6 +25,10 @@
       height: 1px;
       background-color: $bg-color-1;
     }
+  }
+  &__intro {
+    padding-top: 20px;
+    font: 13px/24px 'opensans';
   }
 /*                        radio                       */
   &__radio-wrap {
@@ -28,7 +41,7 @@
     padding: 14px 0 11px 63px;
     min-height: 36px;
     cursor: pointer;
-    &:before {
+    &::before {
       content: "";
       position: absolute;
       top: 4px;
@@ -78,6 +91,12 @@
   &__check-wrap {
     margin: 6px 0 13px 0;
   }
+  &__wrap-inner {
+    flex-grow: 1;
+    flex-basis: 260px;
+    padding-top: 10px;
+    padding-bottom: 11px;
+  }
   &__check-lab {
     display: block;
     position: relative;
@@ -85,6 +104,7 @@
     padding-left: 64px;
     line-height: 36px;
     margin-bottom: 25px;
+    cursor: pointer;
     &:before {
       content: "";
       position: absolute;
@@ -124,11 +144,15 @@
   }
 /*                                     text                          */
   &__text-wrap {
+    flex-grow: 1;
     margin: 6px 0 -12px 0;
   }
   &__text-lab {
-    font: bold 17px/18px 'opensans';
+    font: 17px/18px 'opensans';
     display: block;
+    & span {
+      font-weight: bold;
+    }
   }
   &__text {
     @include input;
@@ -138,26 +162,49 @@
       border-bottom: 2px solid #62d1ba;
     }
   }
-  /*                                     tel                          */
-  &__tel {
+  /*                                     tel  + mail                        */
+  &__tel,
+  &__email  {
     @include input;
-    padding: 0px 0 13px 0;
-    &:hover, &:focus {
-      border-bottom: 2px solid #62d1ba;
+    padding: 0 45px 18px 0;
+  }
+  &__tel-lab,
+  &__email-lab  {
+    position: relative;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      right: 8px;
+      bottom: 20px;
+      background: url("../img/icon-phone.svg") 50% 50% no-repeat;
+    }
+    &:hover,
+    &:focus {
+      .query__tel,
+      .query__email {
+        border-bottom: 2px solid #62d1ba;
+      }
+      &::after {
+        background: url("../img/icon-phone-hover.svg") 50% 50% no-repeat;
+      }
     }
   }
-  &__tel-lab {
-    display: block;
-    margin: 0 0 10px 0;
-  }
-  /*                                     email                          */
-    &__email {
-    @include input;
-    padding: 0px 0 18px 0;
-  }
   &__email-lab {
-    display: block;
-    margin: 0 0 10px 0;
+    &::after {
+      width: 32px;
+      height: 32px;
+      right: 4px;
+      bottom: 12px;
+      background: url("../img/icon-mail.svg") 50% 50% no-repeat;
+    }
+    &:hover,
+    &:focus {
+      &::after {background: url("../img/icon-mail-hover.svg") 50% 50% no-repeat;}
+    }
   }
     /*                                     add                         */
   &__add {
@@ -179,5 +226,176 @@
     font: 14px/16px 'opensans';
     color: $col-grey;
     margin: 11px 0 29px 0;
+  }
+}
+@media #{$tablet-width} {
+  .query {
+    &__wrapper {
+      &--flex-wrap {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      &--flex-column {
+        flex-direction: column;
+      }
+    }
+    &__line {
+      flex-basis: 167px;
+      & span {
+        margin: 0;
+      }
+      &::after{
+        display: none;
+      }
+    }
+    &__checkbox,
+    &__phone-email{
+      background: #f1f1f1;
+    }
+    &__intro {
+      padding-top: 74px;
+      font: 17px/30px 'opensans';
+    }
+/*                              radio-btn           */
+    &__radio-btn {
+      font: bold 19px/19px 'opensans';
+      padding-top: 58px;
+    }
+    &__radio-lab {
+      padding-bottom: 25px;
+      padding-left: 82px;
+      &::before {
+        top: -1px;
+        width: 52px;
+        height: 52px;
+      }
+      &::after {
+        width: 20px;
+        height: 20px;
+        left: 16px;
+        top: 15px;
+      }
+    }
+/*                              checkbox            */
+    &__checkbox {
+      font: bold 19px/19px 'opensans';
+      margin-top: 36px;
+      padding-top: 46px;
+      padding-bottom: 30px;
+    }
+    &__wrap-inner {
+      display: flex;
+      flex-basis: 500px;
+      flex-wrap: wrap;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    &__check-lab {
+      flex-grow: 1;
+      padding-top: 10px;
+      padding-left: 82px;
+      flex-basis: 168px;
+      margin-bottom: 30px;
+      &::after {
+        width: 29px;
+        height: 16px;
+        top: 16px;
+        left: 12px;
+      }
+      &::before {
+        height: 50px;
+        width: 50px;
+        top: 4px;
+        left: 0px;
+      }
+    }
+/*                              checkbox            */
+    &__name {
+      font: bold 19px/19px 'opensans';
+      padding: 44px 0 13px 0;
+    }
+    &__text-wrap {
+      flex-grow: 1;
+    }
+    &__text-lab {
+      display: flex;
+      margin-bottom: 24px;
+      font: 19px/19px 'opensans';
+      & span {
+        padding: 15px 36px 0 0;
+      }
+    }
+    &__text {
+      font: 19px/19px 'opensans';
+      padding: 11px 15px 13px 15px;
+      margin: 0px;
+    }
+/*                              tel + email            */
+    &__phone-email {
+      margin-top: 25px; /* temp */
+      padding-top: 44px;
+      padding-bottom: 35px;
+    }
+    &__tel-lab,
+    &__email-lab {
+      flex-basis:501px;
+      flex-grow: 1;
+      padding-top: 21px;
+      margin-bottom: 15px;
+    }
+    &__tel,
+    &__email {
+      padding-left: 19px;
+      padding-bottom: 11px;
+      font: 19px/19px 'opensans';
+    }
+/*                              textarea                */
+    &__add-text {
+      padding-top: 46px;
+    }
+    &__add {
+      margin-top: 4px;
+      font: 19px/19px 'opensans';
+      flex-basis: 501px;
+      flex-grow: 1;
+    }
+    &__note {
+      font: 17px/30px 'opensans';
+      margin-left: auto;
+      margin-top: 52px;
+      order: 1;
+    }
+  }
+}
+@media #{$desktop-width} {
+  .query {
+    &__intro {
+      padding: 124px 175px 0 175px;
+    }
+    &__line {
+      flex-basis: 175px;
+      & span {
+        margin: 0 auto;
+      }
+    }
+    &__wrap-inner {
+      padding-right: 86px;
+    }
+    &__text-wrap {
+      padding-right: 175px;
+    }
+    &__tel-lab,
+    &__email-lab {
+      flex-basis: 700px;
+      flex-grow: 1;
+      margin-right: 175px;
+    }
+    &__add {
+      flex-basis: 700px;
+      margin-right: 175px;
+    }
+    &__note {
+      margin-right: 175px;
+    }
   }
 }

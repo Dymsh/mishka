@@ -7,6 +7,7 @@
   text-align: center;
   width: 260px;
   background-color: transparent;
+  cursor: pointer;
   &__link {
     display: block;
   }
@@ -19,6 +20,24 @@
     color: #7c7c7c;
   }
   &--catalog {
-  width: 190px;
+    width: 190px;
+    @media #{$tablet-width} {
+      width: 585px;
+      order: 4;
+    }
+    @media #{$desktop-width} {
+      width: 230px;
+      margin:10px 0 0 0;
+    }
+  }
+  &--form-flex {
+    @media #{$tablet-width} {
+    margin: 45px 0 0 0;
+    width: 232px;
+    height: 54px;
+    }
+    @media #{$desktop-width} {
+    margin-left: 175px;
+    }
   }
 }
