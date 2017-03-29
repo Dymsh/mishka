@@ -35,8 +35,6 @@
     margin-top: 28px;
     width: 260px;
     height: 315px;
-    border: 1px solid red; /* temp */
-    box-sizing: border-box; /* temp */
   }
   &__price {
     text-align: center;
@@ -78,7 +76,7 @@
     }
     &__image {
       position: absolute;
-      width: 334px;
+      width: 333px;
       height: 404px;
       bottom: 0px;
       right: 0px;

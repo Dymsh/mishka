@@ -63,8 +63,11 @@
   .reviews {
     margin-top: -28px;
     &__wrapper {
-      background: url("../img/review@1x.jpg") 0 -80px no-repeat;
-      background-origin: content-box;
+      background: url("../img/review@1x.jpg") 0 0 no-repeat;
+      @media #{$retina} {
+        background: url("../img/review@2x.jpg") 0 0 no-repeat;
+        background-size: 350px;
+      }
       position: relative;
       padding-top: 80px;
       padding-bottom: 116px;

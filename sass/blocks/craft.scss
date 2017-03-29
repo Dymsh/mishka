@@ -6,6 +6,12 @@
     flex-wrap: wrap;
     border: 1px solid #ededed;
     padding-bottom: 32px;
+    &:hover {
+        box-shadow: 0 6px 10px 0 #e8e8e8;
+    }
+    &:active {
+        box-shadow: 0 3px 5px 0 #e8e8e8;
+    }
   }
   &__title {
     flex-basis: 350px;
@@ -28,6 +34,10 @@
     padding: 30px 32px 46px 32px;
     color: $col-grey;
   }
+  &__video{
+    width: 260px;
+    height: 150px;
+  }
 }
 @media #{$tablet-width} {
   .craft {
@@ -39,7 +49,7 @@
     &__video {
       order: 1;
       width: 668px;
-      height: 453px;
+      height: 455px;
     }
     &__title {
       order: 2;
@@ -57,10 +67,11 @@
   .craft {
     &__wrapper {
       position: relative;
-      padding:0 0 58px 763px;
+      padding:0 0 56px 763px;
     }
     &__video {
       position: absolute;
+      width: 682px;
       top: 0px;
       left: 0px;
     }
