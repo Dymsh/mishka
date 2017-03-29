@@ -7,7 +7,11 @@
     border: 1px solid #ededed;
     padding-bottom: 32px;
     &:hover {
+<<<<<<< HEAD
       box-shadow: 0 6px 10px 0 #e8e8e8;
+=======
+     box-shadow: 0 6px 10px 0 #e8e8e8;
+>>>>>>> 6187e89052c7e4aa42a8cfeed3ac4c3237792bc2
     }
     &:active {
       box-shadow: 0 3px 5px 0 #e8e8e8;
@@ -28,6 +32,12 @@
       height: 40px;
       background: url(../img/icon-video.svg) 50% 50% no-repeat;
     }
+  }
+  &__video {
+    width: 260px;
+    height: 151px;
+    box-sizing: border-box; /* temp */
+    border: 1px solid red;
   }
   &__description {
     font: 13px/24px 'opensans';
