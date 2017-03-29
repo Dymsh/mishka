@@ -1,6 +1,6 @@
 .craft {
   @include container;
-  margin-top: 35px;
+  margin-top: 29px;
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -16,7 +16,7 @@
   &__title {
     flex-basis: 350px;
     position: relative;
-    padding: 22px 0 22px 90px;
+    padding: 23px 0 22px 90px;
     font: bold 17px/24px 'opensans';
     color: #000;
     &::before {
@@ -32,8 +32,6 @@
   &__video {
     width: 260px;
     height: 151px;
-    box-sizing: border-box; /* temp */
-    border: 1px solid red;
   }
   &__description {
     font: 13px/24px 'opensans';
@@ -59,7 +57,7 @@
     }
     &__title {
       order: 2;
-      padding: 39px 0 0 104px;
+      padding: 34px 0 0 104px;
       font-size: 20px;
     }
     &__description {

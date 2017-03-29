@@ -21,7 +21,7 @@
   &__wrap-inner {
     display: flex;
     flex-direction: column;
-    padding: 24px 28px 28px 28px;
+    padding: 28px 28px 28px 28px;
     border-top: 1px solid #ededed;
   }
   &__name {
@@ -68,7 +68,7 @@
 }
 @media #{$tablet-width} {
   .cards {
-    padding-top: 54px;
+    padding-top: 38px;
     &__item {
       display: flex;
       margin-bottom: 27px;
@@ -99,7 +99,7 @@
 }
 @media #{$desktop-width} {
   .cards {
-    padding-top: 105px;
+    padding-top: 89px;
     flex-direction: row;
     justify-content: space-between;
     &__item {
@@ -114,6 +114,7 @@
     }
     &__wrap-inner {
       width: 316px;
+      padding-top: 24px;
       padding-bottom: 14px;
       box-sizing: border-box;
 }

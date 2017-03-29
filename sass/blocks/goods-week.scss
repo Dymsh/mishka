@@ -7,6 +7,7 @@
   }
   &__head {
     font: bold 25px/30px 'opensans';
+    color: #000;
     }
   &__action {
     font: bold 17px/20px 'opensans';
@@ -40,17 +41,11 @@
     text-align: center;
     font: bold 17px/74px 'opensans';
   }
-  &:after {
-    display: block;
-    content: "";
-    height: 14px;
-    background: #e4e4ff url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
-  }
 }
 @media #{$tablet-width} {
   .goods-week {
     &__wrapper {
-      padding-top: 60px;
+      padding-top: 30px;
       padding-bottom: 50px;
     }
     &__header {
@@ -101,7 +96,7 @@
 @media #{$desktop-width} {
   .goods-week {
     &__wrapper {
-      padding-top: 142px;
+      padding-top: 107px;
       padding-bottom: 77px;
     }
     &__header {

@@ -26,6 +26,7 @@
 }
 @media #{$tablet-width} {
   .page-name {
+    @include fill-decoration;
     &__add-right {
       display: block;
       @include clearfix;

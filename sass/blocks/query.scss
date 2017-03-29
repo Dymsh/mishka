@@ -1,5 +1,6 @@
 fieldset {
   border: none;
+  padding: 0px;
 }
 .query {
   &__wrapper {
@@ -27,7 +28,7 @@ fieldset {
     }
   }
   &__intro {
-    padding-top: 20px;
+    padding-top: 27px;
     font: 13px/24px 'opensans';
   }
 /*                        radio                       */
@@ -94,7 +95,7 @@ fieldset {
   &__wrap-inner {
     flex-grow: 1;
     flex-basis: 260px;
-    padding-top: 10px;
+    padding-top: 6px;
     padding-bottom: 11px;
   }
   &__check-lab {
@@ -253,7 +254,7 @@ fieldset {
       background: #f1f1f1;
     }
     &__intro {
-      padding-top: 74px;
+      padding-top: 61px;
       font: 17px/30px 'opensans';
     }
 /*                              radio-btn           */
@@ -362,7 +363,7 @@ fieldset {
     &__note {
       font: 17px/30px 'opensans';
       margin-left: auto;
-      margin-top: 52px;
+      margin-top: 50px;
       order: 1;
     }
   }
@@ -370,7 +371,7 @@ fieldset {
 @media #{$desktop-width} {
   .query {
     &__intro {
-      padding: 124px 175px 0 175px;
+      padding: 109px 175px 0 175px;
     }
     &__line {
       flex-basis: 175px;

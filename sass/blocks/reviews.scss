@@ -3,10 +3,11 @@
   &__wrapper {
     @include container;
     padding-top: 52px;
-    padding-bottom: 45px;
+    padding-bottom: 32px;
   }
   &__head {
     font: bold 25px/30px 'opensans';
+    color: #000;
   }
   &__text {
     font: 15px/30px 'opensans';
@@ -52,24 +53,19 @@
       }
     }
   }
-  &::after {
-    display: block;
-    content: "";
-    height: 7px;
-    background: #e4e4ff url("../img/zigzag-line-desktop.png") 50% 50% repeat-x;
-  }
 }
 @media #{$tablet-width} {
   .reviews {
-    margin-top: -28px;
+    width: 768px;
+    margin: auto;
+    background: url("../img/review@1x.jpg") 0 0 no-repeat;
+    @media #{$retina} {
+      background: url("../img/review@2x.jpg") 0 0 no-repeat;
+      background-size: 350px;
+    }
     &__wrapper {
-      background: url("../img/review@1x.jpg") 0 0 no-repeat;
-      @media #{$retina} {
-        background: url("../img/review@2x.jpg") 0 0 no-repeat;
-        background-size: 350px;
-      }
       position: relative;
-      padding-top: 80px;
+      padding-top: 78px;
       padding-bottom: 116px;
     }
     &__head {
@@ -95,21 +91,19 @@
     &__nav {
       border: none;
     }
-    &::after {
-    height: 16px;
-    }
-  }
-  .btn--reviews {
-    position: absolute;
-    width: 167px;
-    top: 80px;
-    right: 0px;
   }
 }
 @media #{$desktop-width} {
   .reviews {
+    width: auto;
+    background: none;
     &__wrapper {
       padding-bottom: 164px;
+      background: url("../img/review@1x.jpg") 0 0 no-repeat;
+      @media #{$retina} {
+        background: url("../img/review@2x.jpg") 0 0 no-repeat;
+        background-size: 350px;
+      }
     }
     &__head {
       font: bold 53px/57px 'opensans';
@@ -120,9 +114,6 @@
     }
     &__bottom {
       padding: 41px 0 0 175px;
-    }
-    &::after{
-      height: 23px;
     }
   }
 }
