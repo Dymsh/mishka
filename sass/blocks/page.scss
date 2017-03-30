@@ -2,9 +2,10 @@
   margin: 0px;
   padding: 0px;
   min-width: 320px;
-  font: 15px 'opensans' , sans-serif;
+  font: 15px 'opensans', 'arial' , sans-serif;
 }
 $pattern: catalog;
+/*
 .page {
   &--#{$pattern} {
     background-position-x: 50%;
@@ -18,4 +19,4 @@ $pattern: catalog;
       background-position-x: 50%;
     }
   }
-}
+}*/

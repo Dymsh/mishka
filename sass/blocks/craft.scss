@@ -41,6 +41,29 @@
   &__video{
     width: 260px;
     height: 150px;
+    position: relative;
+  }
+  &__video-btn {
+    display: flex;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+  }/*fill="#63D1BB"*/
+  &__icon {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: transform, 0.1s;
+    fill: #63D1BB;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &:active {
+      fill: #d0f1ea;
+      transform: scale(0.8);
+    }
   }
 }
 @media #{$tablet-width} {
