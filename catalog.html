@@ -138,6 +138,18 @@
     </header>
     <main>
       <div class="page-name">
+        <div class="modal">
+          <div class="modal__block">
+            <p class="modal__header">Добавить в корзину</p>
+            <p class="modal__message">выберите размер</p>
+            <div class="modal__btns">
+              <button id="size-s" class="modal__btn" type="button">s</button>
+              <button id="size-m" class="modal__btn" type="button">m</button>
+              <button id="size-l" class="modal__btn" type="button">l</button>
+            </div>
+            <button id="closeModal" class="modal__btn-close" type="button">добавить</button>
+          </div>
+        </div>
         <div class="page-name__wrapper">
           <h1 class="page-name__head">Каталог товаров</h1>
         </div>
@@ -242,7 +254,7 @@
             </picture>
           </div>
           <p class="craft__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <button class="btn btn--catalog" type="button">сделать заказ</button>
+          <button id="openModal" class="btn btn--catalog" type="button">сделать заказ</button>
         </div>
       </section>
     </main>
@@ -276,19 +288,7 @@
         </div>
       </div>
     </footer>
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__btn');
-    navMain.classList.remove('main-nav--nojs');
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--open');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--open');
-      }
-    });
-  </script>
+  <script src="js/menu.js"></script>
+  <script src="js/modal.js"></script>
   </body>
 </html>
