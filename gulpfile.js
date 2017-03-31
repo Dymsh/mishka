@@ -20,7 +20,7 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task("serve", ["style"], function() {
+gulp.task("server", ["style"], function() {
   server.init({
     server: ".",
     notify: false,
