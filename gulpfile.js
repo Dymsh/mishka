@@ -30,9 +30,13 @@ gulp.task ("copy", function() {
   .pipe(gulp.dest("build"));
 })
 
-gulp.task ("copy-html", function(){
+gulp.task ("html-copy", function(){
   return gulp.src("*.html")
   .pipe(gulp.dest("build"));
+});
+gulp.task("html-update", ["html-copy"], function(done) {
+  server.reload();
+  done();
 });
 gulp.task("svgstore", function() {
   return gulp.src("build/img/*.svg")
@@ -69,7 +73,7 @@ gulp.task("style", function() {
 
 gulp.task("server", function() {
   server.init({
-    server: "build",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -77,7 +81,7 @@ gulp.task("server", function() {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html"), ["copy-html"];
+  gulp.watch("*.html", ["html-update"]);
 });
 
 gulp.task("build", function(end) {
