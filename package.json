@@ -8,6 +8,7 @@
     "autoprefixer": "6.7.x",
     "browser-sync": "2.18.8",
     "css-mqpacker": "^5.0.1",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2",
     "gulp-csso": "^3.0.0",
@@ -25,8 +26,7 @@
   },
   "scripts": {
     "test": "editorconfig-cli",
-    "build": "gulp style",
-    "go": "gulp style",
+    "build": "gulp build",
     "start": "gulp server"
   },
   "editorconfig-cli": [

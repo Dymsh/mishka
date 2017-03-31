@@ -13,28 +13,42 @@ var imagemin = require("gulp-imagemin");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var sequence = require("gulp-sequence");
-var clean = require("gulp-delete-directory-files");
-/*
+var del = require("del");
+
 gulp.task("clean", function() {
-  return gulp.src(".")
-  .pipe(clean("atik"));
+  return del("build");
 });
-*/
+gulp.task ("copy", function() {
+  return gulp.src([
+    "fonts/**/*.{woff,woff2}",
+    "img/**",
+    "js/**",
+    "*.html"
+    ], {
+    base: "."
+  })
+  .pipe(gulp.dest("build"));
+})
+
+gulp.task ("copy-html", function(){
+  return gulp.src("*.html")
+  .pipe(gulp.dest("build"));
+});
 gulp.task("svgstore", function() {
-  return gulp.src("img/*.svg")
+  return gulp.src("build/img/*.svg")
   .pipe(svgmin())
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("svg-sprite"));
+  .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("imagemin", function() {
-  return gulp.src("img/**/*.{jpg,png,gif}")
+  return gulp.src("build/img/**/*.{jpg,png,gif}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.jpegtran({progressive: true})
   ]))
-  .pipe(gulp.dest("img-min"));
+  .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("style", function() {
@@ -45,16 +59,17 @@ gulp.task("style", function() {
       autoprefixer({browsers: ["last 2 versions"]}),
       mqpacker({sort: true})
     ]))
-    .pipe(gulp.dest("css"))
+    .pipe(rename("stile-beforeCsso.css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
-    .pipe(rename("style-min.css"))
-    .pipe(gulp.dest("css"));
-
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("server", function() {
   server.init({
-    server: ".",
+    server: "build",
     notify: false,
     open: true,
     cors: true,
@@ -62,9 +77,9 @@ gulp.task("server", function() {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+  gulp.watch("*.html"), ["copy-html"];
 });
 
-gulp.task("sequence", function(end) {
-  gulp.sequence ("svgstore","imagemin","style","server")(end)
+gulp.task("build", function(end) {
+  sequence("clean","copy","svgstore","imagemin","style","server", end);
 });
