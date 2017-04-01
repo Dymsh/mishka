@@ -1,7 +1,8 @@
 .about {
+  @include line-decoration;
   &__wrapper {
     @include container;
-    padding-top: 30px;
+    padding-top: 26px;
   }
   &__head {
     font: bold 25px/30px 'opensans';
@@ -39,6 +40,7 @@
   .about {
     &__wrapper {
       padding-top: 51px;
+      margin-bottom: -27px;
     }
     &__items {
       padding-top: 83px;
@@ -58,6 +60,21 @@
       & br {
         display: block;
       }
+    }
+    &__item:nth-child(2) {
+      order: 3;
+    }
+    &__item:nth-child(3) {
+      order: 5;
+    }
+    &__item:nth-child(4) {
+      order: 2;
+    }
+    &__item:nth-child(5) {
+      order: 3;
+    }
+    &__item:nth-child(6) {
+      order: 6;
     }
   }
 }

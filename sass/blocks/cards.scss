@@ -7,26 +7,21 @@
     margin-top: 27px;
     border: 1px solid #ededed;
     &:hover {
-      & .cards__wrap-inner {
         box-shadow: 0 6px 10px 0 #e8e8e8;
-      }
     }
     &:active {
-      & .cards__wrap-inner {
         box-shadow: 0 3px 5px 0 #e8e8e8;
-      }
     }
   }
   &__image {
     width: 260px;
-    height: 198px;
-    border: 1px solid red; /* temp */
-    box-sizing: border-box;/* temp */
+    height: 195px;
+
   }
   &__wrap-inner {
     display: flex;
     flex-direction: column;
-    padding: 24px 28px 28px 28px;
+    padding: 28px 28px 28px 28px;
     border-top: 1px solid #ededed;
   }
   &__name {
@@ -73,7 +68,7 @@
 }
 @media #{$tablet-width} {
   .cards {
-    padding-top: 54px;
+    padding-top: 38px;
     &__item {
       display: flex;
       margin-bottom: 27px;
@@ -87,7 +82,7 @@
     &__image {
       flex-shrink: 0;
       width: 334px;
-      height: 335px;
+      height: 334px;
     }
     &__wrap-inner  {
       align-content: space-between;
@@ -104,7 +99,7 @@
 }
 @media #{$desktop-width} {
   .cards {
-    padding-top: 105px;
+    padding-top: 89px;
     flex-direction: row;
     justify-content: space-between;
     &__item {
@@ -112,13 +107,14 @@
     }
     &__image {
       width: 316px;
-      height: 463px; /* for image temp*/
+      height: 462px; /* for image temp*/
     }
     &__desc {
       padding-bottom: 14px;
     }
     &__wrap-inner {
       width: 316px;
+      padding-top: 24px;
       padding-bottom: 14px;
       box-sizing: border-box;
 }

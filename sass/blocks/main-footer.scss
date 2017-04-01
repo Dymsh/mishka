@@ -1,5 +1,5 @@
 .main-footer {
-    margin-top: 40px;
+  margin-top: 54px;
   background: #f1f1f1;
   &__wrapper {
     @include container;
@@ -36,7 +36,12 @@
   }
   &__logo{
     display: none;
-    border: 1px solid red; /*temp*/
+    &:hover svg {
+      fill: #46c1ae;
+    }
+    &:active svg {
+      fill: #bde3dd;
+    }
   }
   &__logo img {
     width: 103px;
@@ -45,6 +50,7 @@
 }
 @media #{$tablet-width} {
   .main-footer {
+    margin-top: 36px;
     &__wrapper {
       padding-top: 30px;
       padding-bottom: 30px;

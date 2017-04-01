@@ -1,16 +1,19 @@
 .main-nav {
   font: bold 17px/24px 'opensans';
+  &__svg {
+    fill: #000;
+    &:hover {
+      fill: #666666;
+    }
+    &:active {
+      fill: #b2b2b2;
+    }
+  }
   &__logo {
     padding-top: 21px;
     padding-bottom: 15px;
-    width: $logo-width;
+    width: 86px;
     margin: auto;
-    &:hover {
-      color: #666666;
-    }
-    &:active {
-      color: b2b2b2;
-    }
   }
   &__icon {
     margin: 0 25px -4px -50px;
@@ -52,8 +55,10 @@
   }
   &__items-add {
     display: none;
-    color: red; /* temp */
   }
+}
+.tablet, .desktop {
+  display: none;
 }
 @media #{$media-mobile-only} {
   .main-nav__item--catalog {
@@ -65,11 +70,11 @@
       position: absolute;
       background: #fff;
       width: 100%;
-      top: 84px;
+      top: 79px;
       left: 0px;
     }
     & .main-nav__items-goods {
-      top: 242px;
+      top: 238px;
     }
     & .main-nav__btn  {
       background: #fff url("../img/icon-menu-close.svg") 50% 50% no-repeat;
@@ -100,15 +105,17 @@
     justify-content: space-between;
     flex-wrap: wrap;
     &__logo {
-      margin: 0;
-      padding: 22px 0;
+      display: flex;
+      padding: 0px;
+      width: 113px;
+      margin: auto 0;
       margin-right: auto;
     }
     &__icon {
       margin: 0;
       padding: 36px 0 0 32px;
       &--basket {
-        padding: 0 40px 0 0 ;
+        padding: 0 30px 0 0 ;
       }
     }
     &__btn {
@@ -132,6 +139,9 @@
     }
     &__addition-left {
       display: none;
+    }
+    &__addition-right {
+      font-weight: normal;
     }
     &__item {
       border: none;
@@ -183,11 +193,12 @@
       padding-top: 31px;
       font-size: 17px;
       padding-right: 0px;
-      padding-left: 41px;
+      padding-left: 29px;
     }
     &__logo {
       order: 2;
-      margin: 0 auto;
+      width: 149px;
+      margin: auto;
     }
     &__items-goods {
       order: 3;
@@ -201,6 +212,12 @@
       display: inline-block;
       color: #000;
       padding-right: 72px;
+      & a:hover {
+        color: #666666;
+      }
+      & a:active {
+        color: #b2b2b2;
+      }
     }
     &__addition-right {
       margin-left: auto;

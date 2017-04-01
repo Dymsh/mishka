@@ -40,4 +40,16 @@
     margin-left: 175px;
     }
   }
+  &--reviews {
+    @media #{$tablet-width} {
+      position: absolute;
+      width: 175px;
+      height: 52px;
+      top: 52px;
+      right: 0px;
+    }
+    @media  #{$desktop-width} {
+        top: 89px;
+    }
+  }
 }

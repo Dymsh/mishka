@@ -1,7 +1,8 @@
 .contacts {
-  &__wrapper {
+  @include line-decoration;
+  &__wrap-inner {
     @include container;
-    padding-top: 29px;
+    padding-top: 34px;
   }
   &__head {
     font: bold 18px/30px 'opensans';
@@ -38,7 +39,7 @@
 }
 @media #{$tablet-width} {
   .contacts {
-    &__wrapper {
+    &__wrap-inner {
       padding-top: 62px;
     }
     &__head {
@@ -80,15 +81,19 @@
 }
 @media #{$desktop-width} {
   .contacts {
-    position: relative;
-    @include container;
     padding-top: 10px;
-    display: flex;
     &__wrapper {
-      width: auto;
+      @include container;
+      display: flex;
+      position: relative;
+    }
+    &__wrap-inner {
+      display: flex;
+      width: 350px;
+      flex-direction: column;
       padding-top: 140px;
       padding-left: 175px;
-      flex-basis: 350px;
+
     }
     &__head {
       font: bold 53px/57px 'opensans';
@@ -105,6 +110,7 @@
       padding-bottom: 33px;
     }
     &__map {
+      flex-shrink: 0;
       width: 525px;
       height: 461px;
       margin:0;
