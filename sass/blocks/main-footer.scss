@@ -1,12 +1,12 @@
 .main-footer {
-  margin-top: 54px;
+  margin-top: 38px;
   background: #f1f1f1;
   &__wrapper {
     @include container;
   }
   &__copyright {
     border-top: 1px solid #e5e5e5;
-    padding: 22px 0;
+    padding: 20px 0;
     width: 184px;
     margin: auto;
   }
@@ -50,9 +50,9 @@
 }
 @media #{$tablet-width} {
   .main-footer {
-    margin-top: 36px;
+    margin-top: 56px;
     &__wrapper {
-      padding-top: 30px;
+      padding-top: 28px;
       padding-bottom: 30px;
       display: flex;
       justify-content: space-between;
@@ -61,10 +61,16 @@
       border: none;
       flex-basis: 186px;
       margin: 0;
+      padding: 26px 0;
     }
     &__logo {
       align-self: center;
       display: block;
     }
+  }
+}
+@media #{$desktop-width} {
+  .main-footer {
+    margin-top: 106px;
   }
 }
