@@ -15,6 +15,8 @@ var svgmin = require("gulp-svgmin");
 var sequence = require("gulp-sequence");
 var del = require("del");
 
+
+
 gulp.task("clean", function() {
   return del("build");
 });

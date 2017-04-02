@@ -1,6 +1,6 @@
 @mixin container () {
   /*padding: 0 9%;*/
-  width: 320px;
+  width: 260px;
   margin: 0 auto;
   padding: 0 30px;
   @media #{$tablet-width} {
@@ -13,6 +13,19 @@
     width: 1050px;
     /*max-width: 1050px; */
   }
+}
+@mixin visualy-hidden () {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 @mixin input () {
     background-color: transparent;
