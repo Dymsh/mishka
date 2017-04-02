@@ -28,7 +28,7 @@ fieldset {
     }
   }
   &__intro {
-    padding-top: 27px;
+    padding-top: 25px;
     font: 13px/24px 'opensans';
   }
 /*                        radio                       */
@@ -157,8 +157,8 @@ fieldset {
   }
   &__text {
     @include input;
-    padding: 14px 0 15px 0;
-    margin-bottom: 25px;
+    padding: 18px 0 16px 0px;
+    margin-bottom: 20px;
     &:hover, &:focus {
       border-bottom: 2px solid #62d1ba;
     }
@@ -226,7 +226,7 @@ fieldset {
     display: block;
     font: 14px/16px 'opensans';
     color: $col-grey;
-    margin: 11px 0 29px 0;
+    margin: 14px 0 29px;
   }
 }
 @media #{$tablet-width} {
@@ -292,10 +292,9 @@ fieldset {
       padding-bottom: 0px;
     }
     &__check-lab {
-      flex-grow: 1;
       padding-top: 10px;
       padding-left: 82px;
-      flex-basis: 168px;
+      flex-basis: 180px;
       margin-bottom: 30px;
       &::after {
         width: 29px;
@@ -309,6 +308,9 @@ fieldset {
         top: 4px;
         left: 0px;
       }
+    }
+    &__check-lab--right {
+      flex-basis: 100px;
     }
 /*                              checkbox            */
     &__name {
@@ -343,6 +345,14 @@ fieldset {
       flex-grow: 1;
       padding-top: 21px;
       margin-bottom: 15px;
+      &::after {
+        right: 26px;
+        bottom: 17px;
+      }
+    }
+    &__email-lab::after {
+      right: 21px;
+      bottom: 10px;
     }
     &__tel,
     &__email {
@@ -385,11 +395,22 @@ fieldset {
     &__text-wrap {
       padding-right: 175px;
     }
+    &__check-lab--right,
+    &__check-lab {
+      flex-grow: 1;
+      flex-basis: 168px;
+    }
     &__tel-lab,
     &__email-lab {
       flex-basis: 700px;
       flex-grow: 1;
       margin-right: 175px;
+    }
+    &__tel-lab::after {
+      right: 8px;
+    }
+    &__email-lab::after {
+      right: 8px;
     }
     &__add {
       flex-basis: 700px;

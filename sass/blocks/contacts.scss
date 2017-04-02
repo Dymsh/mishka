@@ -45,6 +45,9 @@
 }
 @media #{$tablet-width} {
   .contacts {
+    &__wrapper {
+      margin-bottom: 54px;
+    }
     &__wrap-inner {
       padding-top: 64px;
     }
@@ -94,7 +97,8 @@
   .contacts {
     padding-top: 10px;
     &__wrapper {
-      @include container;
+      margin:0  auto 106px;
+      width: 1050px;
       display: flex;
       position: relative;
     }
