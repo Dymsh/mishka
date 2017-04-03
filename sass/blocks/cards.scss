@@ -54,6 +54,8 @@
     fill: #d3d2d2;
   }
   &__basket {
+    background: none;
+    cursor: pointer;
     &:hover {
       .cards__icon {
         fill: #63d1bb;

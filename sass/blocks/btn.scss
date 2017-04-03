@@ -31,6 +31,7 @@
     }
   }
   &--form-flex {
+    margin-bottom: 16px;
     @media #{$tablet-width} {
     margin: 45px 0 0 0;
     width: 232px;
@@ -45,7 +46,7 @@
       position: absolute;
       width: 175px;
       height: 52px;
-      top: 52px;
+      top: 80px;
       right: 0px;
     }
     @media  #{$desktop-width} {

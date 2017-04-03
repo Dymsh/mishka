@@ -4,18 +4,25 @@
   min-width: 320px;
   font: 15px 'opensans', 'arial' , sans-serif;
 }
-$pattern: catalog;
-/*
+$pattern: catalog;/*
 .page {
+  position: relative;
   &--#{$pattern} {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    z-index: 9999999;
+    opacity: 0.5;
     background-position-x: 50%;
-    background: url("../pattern/#{$pattern}-mobile.jpg") no-repeat;
+    background: url("../img/pattern/#{$pattern}-mobile.jpg") no-repeat;
     @media #{$tablet-width} {
-      background: url("../pattern/#{$pattern}-tablet.jpg") no-repeat;
+      background: url("../img/pattern/#{$pattern}-tablet.jpg") no-repeat;
       background-position-x: 50%;
     }
     @media #{$desktop-width} {
-      background: url("../pattern/#{$pattern}-desktop.jpg") no-repeat;
+      background: url("../img/pattern/#{$pattern}-desktop.jpg") no-repeat;
       background-position-x: 50%;
     }
   }

@@ -59,14 +59,14 @@
   &__link {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+    padding: 26px 0 15px 0;
   }
   &__icon {
     fill: #3bb09d;
+    padding-right: 7px;
     &--dark {
       position: relative;
-      padding: 1px 0;
+      padding: 0px 7px;
       left:10px;
       fill: #35a999;
     }
@@ -97,6 +97,12 @@
     }
     &__link {
       padding: 28px 0;
+      & span {
+        line-height: 28px;
+      }
+    }
+    &__icon {
+      padding-right: 0px;
     }
   }
 }

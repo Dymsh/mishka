@@ -1,25 +1,19 @@
 .social-links {
-  width: 156px;
-  padding: 24px 0 28px 0;
+  width: 148px;
+  padding: 28px 0 21px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   &__link {
-    display: flex;
-    height: 30px;
+    font-size: 0px;
   }
   &__item {
     width: 30px;
     height: 30px;
-    /*&--instagram {
-      background: url("../img/icon-insta.svg") 50% 50% no-repeat;
+    &--move {
+      margin-top: -5px;
+      padding-left: 10px;
     }
-    &--facebook {
-      background: url("../img/icon-fb.svg") 50% 50% no-repeat;
-    }
-    &--twitter {
-      background: url("../img/icon-twitter.svg") 50% 50% no-repeat;
-    }*/
   }
   &__icon {
     margin: auto;
@@ -30,5 +24,10 @@
     &:active {
       fill: #c1e3de;
     }
+  }
+}
+@media #{$tablet-width} {
+  .social-links {
+      padding: 33px 0 21px 86px;
   }
 }

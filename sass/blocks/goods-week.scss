@@ -29,7 +29,12 @@
   }
   &__desc-item {
     border-bottom: 1px solid #ececec;
-    height: 39px;
+  }
+  &__par {
+    padding: 9px 0;
+  }
+  &__ans {
+    padding-left: 20px;
   }
   &__image {
     margin: 0 auto;
@@ -57,7 +62,7 @@
     }
     &__action {
       width: 100px;
-      padding-top: 11px;
+      padding-top: 13px;
       padding-right: 13px;
       text-align: center;
       font: bold 17px/17px 'opensans';
@@ -113,12 +118,19 @@
     &__action {
       padding-left: 32px;
       padding-right: 40px;
+      padding-top: 16px;
     }
     &__desc {
       margin-top: 45px;
     }
+    &__par {
+      padding: 10px 0;
+    }
+    &__anc {
+      padding-left: 9px;
+    }
     &__price {
-      margin-top: 113px;
+      margin-top: 109px;
     }
     &__image {
       width: 525px;

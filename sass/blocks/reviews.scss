@@ -2,7 +2,7 @@
   color: $col-grey;
   &__wrapper {
     @include container;
-    padding-top: 52px;
+    padding-top: 55px;
     padding-bottom: 32px;
   }
   &__head {
@@ -21,7 +21,7 @@
   &__email {
     display: block;
     font: 15px/17px 'opensans';
-    padding-top: 16px;
+    padding-top: 13px;
   }
   &__nav-wrap {
     display: flex;
