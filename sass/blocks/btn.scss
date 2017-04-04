@@ -8,16 +8,22 @@
   width: 260px;
   background-color: transparent;
   cursor: pointer;
-  &__link {
-    display: block;
+  &--goods {
+    @media #{$tablet-width} {
+      width: 290px;
+      margin-top: 32px;
+    }
   }
-  &:hover {
-    background: $col-grey;
-    color: #ffffff;
-  }
-  &:active {
-    background: $col-grey;
-    color: #7c7c7c;
+  &--contacts {
+    @media #{$tablet-width} {
+      width: 232px;
+      height: 52px;
+    }
+    @media #{$desktop-width} {
+      position: absolute;
+      bottom:0px;
+      left: 175px;
+    }
   }
   &--catalog {
     width: 190px;
@@ -33,12 +39,13 @@
   &--form-flex {
     margin-bottom: 16px;
     @media #{$tablet-width} {
-    margin: 45px 0 0 0;
+    margin: 52px 0 0 0;
     width: 232px;
     height: 54px;
     }
     @media #{$desktop-width} {
     margin-left: 175px;
+    margin-top: 48px;
     }
   }
   &--reviews {
@@ -50,7 +57,18 @@
       right: 0px;
     }
     @media  #{$desktop-width} {
-        top: 89px;
+      top: 79px;
     }
   }
+  &:hover {
+    background: $col-grey;
+    color: #ffffff;
+  }
+  &:active {
+    background: $col-grey;
+    color: #7c7c7c;
+  }
+}
+.btn__link {
+    display: block;
 }

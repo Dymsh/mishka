@@ -1,59 +1,29 @@
 .page-name {
   background: #f1f1f1;
-  &__wrapper {
-    @include container;
-    text-align: center;
-  }
-  &__head {
-    font: bold 27px/30px 'opensans';
-    padding-top: 69px;
-    padding-bottom: 73px;
-  }
-  &__add-right,
-  &__add-left{
-    display: none;
-    padding-top: 17px;
-    & a {
-      padding: 0px;
-      &:hover {
-        color: #666666;
-      }
-      &:active {
-        color: #b2b2b2;
-      }
-    }
-  }
+}
+.page-name__wrapper {
+  @include container;
+  text-align: center;
+}
+.page-name__head {
+  font: bold 27px/30px 'opensans';
+  padding-top: 69px;
+  padding-bottom: 73px;
 }
 @media #{$tablet-width} {
   .page-name {
     @include fill-decoration;
-    &__add-right {
-      display: block;
-      @include clearfix;
-      float: right;
-      color: $col-grey;
-      font: 15px/24px 'opensans';
-    }
-    &__head {
-      font: bold 43px/50px 'opensans';
-      padding-top: 93px;
-      padding-bottom: 80px;
-    }
+  }
+  .page-name__head {
+    font: bold 43px/50px 'opensans';
+    padding-top: 93px;
+    padding-bottom: 80px;
   }
 }
 @media #{$desktop-width} {
-  .page-name {
-    &__head {
-      font: bold 53px/57px 'opensans';
-      padding-top: 93px;
-      padding-bottom: 100px;
-    }
-    &__add-left{
-      display: block;
-      float: left;
-      color: #000;
-      font: bold 15px/24px 'opensans';
-      padding-right: 60px;
-    }
+  .page-name__head {
+    font: bold 53px/57px 'opensans';
+    padding-top: 93px;
+    padding-bottom: 100px;
   }
 }

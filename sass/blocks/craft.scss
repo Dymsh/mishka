@@ -1,121 +1,129 @@
 .craft {
   @include container;
   margin-top: 29px;
-  &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid #ededed;
-    padding-bottom: 32px;
-    margin-bottom: 57px;
-    &:hover {
-      box-shadow: 0 6px 10px 0 #e8e8e8;
-    }
-    &:active {
-      box-shadow: 0 3px 5px 0 #e8e8e8;
-    }
+}
+.craft__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ededed;
+  padding-bottom: 32px;
+  margin-bottom: 57px;
+  &:hover {
+    box-shadow: 0 6px 10px 0 #e8e8e8;
   }
-  &__title {
-    flex-basis: 350px;
-    position: relative;
-    padding: 23px 0 22px 90px;
-    font: bold 17px/24px 'opensans';
-    color: #000;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 24px;
-      width: 40px;
-      left: 30px;
-      height: 40px;
-      background: url(../img/icon-video.svg) 50% 50% no-repeat;
-    }
-  }
-  &__video {
-    width: 260px;
-    height: 151px;
-  }
-  &__description {
-    font: 13px/24px 'opensans';
-    padding: 30px 32px 46px 32px;
-    color: $col-grey;
-  }
-  &__video{
-    width: 260px;
-    height: 150px;
-    position: relative;
-  }
-  &__video-btn {
-    display: flex;
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom:0;
-  }/*fill="#63D1BB"*/
-  &__icon {
-    display: block;
-    margin: auto;
-    cursor: pointer;
-    transition: transform, 0.1s;
-    fill: #63D1BB;
-    &:hover {
-      transform: scale(1.2);
-    }
-    &:active {
-      fill: #d0f1ea;
-      transform: scale(0.8);
-    }
+  &:active {
+    box-shadow: 0 3px 5px 0 #e8e8e8;
   }
 }
+.craft__title {
+  flex-basis: 350px;
+  position: relative;
+  padding: 23px 0 22px 90px;
+  font: bold 17px/24px 'opensans';
+  color: #000;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    width: 40px;
+    left: 30px;
+    height: 40px;
+    background: url(../img/icon-video.svg) 50% 50% no-repeat;
+  }
+}
+.craft__video {
+  width: 260px;
+  height: 151px;
+}
+.craft__description {
+  font: 13px/24px 'opensans';
+  padding: 30px 32px 46px 32px;
+  color: $col-grey;
+}
+.craft__video{
+  width: 260px;
+  height: 150px;
+  position: relative;
+}
+.craft__video-btn {
+  display: flex;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom:0;
+}
+.craft__icon {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  transition: transform, 0.1s;
+  fill: #63D1BB;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    fill: #d0f1ea;
+    transform: scale(0.8);
+  }
+}
+
 @media #{$tablet-width} {
   .craft {
     margin-top: 27px;
     padding-bottom: 24px;
-    &__wrapper {
-      padding-bottom: 43px;
-      margin-bottom: 4px;
-    }
-    &__video {
-      order: 1;
-      width: 668px;
-      height: 455px;
-    }
-    &__title {
-      order: 2;
-      padding: 34px 0 0 104px;
-      font-size: 20px;
-    }
-    &__description {
-      order: 3;
-      font: 15px/30px 'opensans';
-      padding: 31px 36px 34px 43px;
+  }
+  .craft__wrapper {
+    padding-bottom: 43px;
+    margin-bottom: 4px;
+  }
+  .craft__video {
+    order: 1;
+    width: 668px;
+    height: 455px;
+  }
+  .craft__title {
+    order: 2;
+    padding: 37px 0 0 104px;
+    font-size: 20px;
+    &::before {
+      top: 28px;
+      left: 37px;
     }
   }
+  .craft__description {
+    order: 3;
+    font: 15px/30px 'opensans';
+    padding: 31px 36px 34px 43px;
+  }
+
 }
 @media #{$desktop-width} {
   .craft {
-    &__wrapper {
-      position: relative;
-      padding:0 0 56px 763px;
-      margin-bottom: 76px;
+    margin-top: 34px;
+    padding-bottom: 2px;
+  }
+  .craft__wrapper {
+    position: relative;
+    padding:0 0 56px 760px;
+    margin-bottom: 76px;
+  }
+  .craft__video {
+    position: absolute;
+    width: 682px;
+    top: 0px;
+    left: 0px;
+  }
+  .craft__title {
+    padding: 95px 65px 0 0px;
+    &::before {
+      left: -3px;
+      top: 37px;
     }
-    &__video {
-      position: absolute;
-      width: 682px;
-      top: 0px;
-      left: 0px;
-    }
-    &__title {
-      padding: 98px 65px 0 0px;
-      &::before {
-        left: -5px;
-        top: 41px;
-      }
-    }
-    &__description  {
-      padding-left: 0px;
-      padding-right: 0px;
-      padding-top: 33px;
-    }
+  }
+  .craft__description  {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 33px;
   }
 }

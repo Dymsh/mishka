@@ -4,30 +4,30 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  &__link {
-    font-size: 0px;
+}
+.social-links__link {
+  font-size: 0px;
+}
+.social-links__item {
+  width: 30px;
+  height: 30px;
+  &--move {
+    margin-top: -5px;
+    padding-left: 10px;
   }
-  &__item {
-    width: 30px;
-    height: 30px;
-    &--move {
-      margin-top: -5px;
-      padding-left: 10px;
-    }
+}
+.social-links__icon {
+  margin: auto;
+  fill: #231F20;
+  &:hover {
+    fill: #51c4b2;
   }
-  &__icon {
-    margin: auto;
-    fill: #231F20;
-    &:hover {
-      fill: #51c4b2;
-    }
-    &:active {
-      fill: #c1e3de;
-    }
+  &:active {
+    fill: #c1e3de;
   }
 }
 @media #{$tablet-width} {
   .social-links {
-      padding: 33px 0 21px 86px;
+    padding: 33px 0 21px 86px;
   }
 }

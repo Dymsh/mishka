@@ -1,72 +1,72 @@
 .main-footer {
   margin-top: 38px;
   background: #f1f1f1;
-  &__wrapper {
-    @include container;
-  }
-  &__copyright {
-    border-top: 1px solid #e5e5e5;
-    padding: 20px 0;
-    width: 184px;
-    margin: auto;
-  }
-  &__icon {
-    fill: #63d1bb;
-  }
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font: bold 19px/34px 'opensans';
-    &:hover {
-      .main-footer__icon {
-        fill: #46c1ae;
-      }
-    }
-    &:active {
-      color: #a8a8a8;
-      & .main-footer__icon {
-        fill: #bde3dd;
-      }
-    }
-  }
-  &__copy-logo {
-    width: 27px;
-    height: 34px;
-  }
-  &__logo{
-    display: none;
-    &:hover svg {
+}
+.main-footer__wrapper {
+  @include container;
+}
+.main-footer__copyright {
+  border-top: 1px solid #e5e5e5;
+  padding: 20px 0;
+  width: 184px;
+  margin: auto;
+}
+.main-footer__icon {
+  fill: #63d1bb;
+}
+.main-footer__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font: bold 19px/34px 'opensans';
+  &:hover {
+    .main-footer__icon {
       fill: #46c1ae;
     }
-    &:active svg {
-      fill: #bde3dd;
-    }
   }
-  &__logo img {
-    width: 103px;
-    height: 34px;
+  &:active {
+    color: #a8a8a8;
   }
+  &:active .main-footer__icon {
+    fill: #bde3dd;
+  }
+}
+.main-footer__copy-logo {
+  width: 27px;
+  height: 34px;
+}
+.main-footer__logo{
+  display: none;
+  &:hover svg {
+    fill: #46c1ae;
+  }
+  &:active svg {
+    fill: #bde3dd;
+  }
+}
+.main-footer__logo img {
+  width: 103px;
+  height: 34px;
 }
 @media #{$tablet-width} {
   .main-footer {
     margin-top: 35px;
-    &__wrapper {
-      padding-top: 28px;
-      padding-bottom: 30px;
-      display: flex;
-      justify-content: space-between;
-    }
-    &__copyright {
-      border: none;
-      flex-basis: 186px;
-      margin: 0;
-      padding: 26px 0;
-    }
-    &__logo {
-      align-self: center;
-      display: block;
-    }
+  }
+  .main-footer__wrapper {
+    padding-top: 28px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-footer__copyright {
+    border: none;
+    flex-basis: 186px;
+    margin: 0;
+    padding: 26px 0;
+  }
+  .main-footer__logo {
+    align-self: center;
+    display: block;
   }
 }
 @media #{$desktop-width} {

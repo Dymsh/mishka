@@ -5,71 +5,72 @@
     background:#f9f9f9 url(../img/hero-mobile@2x.jpg) 50% -18px no-repeat;
     background-size: 575px auto;
   }
-  &__wrapper {
-    @include container;
+}
+.intro__wrapper {
+  @include container;
+}
+.intro__head {
+  text-align: center;
+  font: bold 27px/30px 'opensans';
+  padding-top: 69px;
+  padding-bottom: 121px;
+}
+.intro__text {
+  font: 13px/24px 'opensans';
+  color: #444444;
+  margin-top: 20px;
+}
+.intro__button {
+  @include container;
+  color: #fff;
+  font: bold 19px/24px 'opensans';
+  background: $bg-color-1;
+  &:hover {
+    position: relative;
+    bottom: 5px;
+    box-shadow: 0 5px 0 0 #59d5bc;
+    background: #59d5bc;
   }
-  &__head {
-    text-align: center;
-    font: bold 27px/30px 'opensans';
-    padding-top: 69px;
-    padding-bottom: 121px;
+  &:hover .intro__icon {
+      fill: #3bb09d;
   }
-  &__text {
-    font: 13px/24px 'opensans';
-    color: #444444;
-    margin-top: 20px;
+  &:active {
+    color:8be2d0;
   }
-  &__button {
-    @include container;
-    color: #fff;
-    font: bold 19px/24px 'opensans';
-    background: $bg-color-1;
+  &:active .intro__icon {
+    fill: #29a592;
+
+  }
+  &--dark {
+    background:  $bg-color-2;
     &:hover {
-      position: relative;
-      bottom: 5px;
-      box-shadow: 0 5px 0 0 #59d5bc;
-      background: #59d5bc;
-      & .intro__icon {
-        fill: #3bb09d;
-      }
+      box-shadow: 0 5px 0 0 #46c1ae;
+      background:  #46c1ae;
+    }
+    &:hover .intro__icon--dark {
+      fill: #239f8e;
     }
     &:active {
-      color:8be2d0;
-      & .intro__icon {
-        fill: #29a592;
-      }
+      color: #7ed4c6;
     }
-    &--dark {
-      background:  $bg-color-2;
-      &:hover {
-        box-shadow: 0 5px 0 0 #46c1ae;
-        background:  #46c1ae;
-        & .intro__icon--dark {
-          fill: #239f8e;
-        }
-      }
-      &:active {
-        color: #7ed4c6;
-        & .intro__icon--dark {
-          fill: #37b2a0;
-        }
-      }
+    &:active .intro__icon--dark {
+      fill: #37b2a0;
     }
   }
-  &__link {
-    display: flex;
-    justify-content: space-between;
-    padding: 26px 0 15px 0;
-  }
-  &__icon {
-    fill: #3bb09d;
-    padding-right: 7px;
-    &--dark {
-      position: relative;
-      padding: 0px 7px;
-      left:10px;
-      fill: #35a999;
-    }
+}
+.intro__link {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 0 15px 0;
+}
+.intro__icon {
+  fill: #3bb09d;
+  padding-right: 7px;
+  &--dark {
+    position: relative;
+    padding: 0px 7px;
+    left:10px;
+    fill: #35a999;
   }
 }
 @media #{$tablet-width} {
@@ -80,38 +81,35 @@
       background:#f9f9f9 url("../img/hero-desktop@2x.jpg") 50% no-repeat;
       background-size: 1150px;
     }
-    &__head {
-      font: bold 43px/50px 'opensans';
-      padding-top: 154px;
-      padding-bottom: 374px;
-    }
-    &__buttons {
-      @include container;
-      display: flex;
-
-    }
-    &__button {
-      flex-basis: 334px;
-      flex-grow: 1;
-      padding: 0 37px;
-    }
-    &__link {
-      padding: 28px 0;
-      & span {
-        line-height: 28px;
-      }
-    }
-    &__icon {
-      padding-right: 0px;
-    }
+  }
+  .intro__head {
+    font: bold 43px/50px 'opensans';
+    padding-top: 154px;
+    padding-bottom: 374px;
+  }
+  .intro__buttons {
+    @include container;
+    display: flex;
+  }
+  .intro__button {
+    flex-basis: 334px;
+    flex-grow: 1;
+    padding: 0 37px;
+  }
+  .intro__link {
+    padding: 28px 0;
+  }
+  .intro__link span {
+    line-height: 28px;
+  }
+  .intro__icon {
+    padding-right: 0px;
   }
 }
 @media #{$desktop-width} {
-  .intro {
-    &__head {
-      font: bold 53px/57px 'opensans';
-      padding-top: 153px;
-      padding-bottom: 359px;
-    }
+  .intro__head {
+    font: bold 53px/57px 'opensans';
+    padding-top: 153px;
+    padding-bottom: 359px;
   }
 }
